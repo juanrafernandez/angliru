@@ -26,7 +26,13 @@ class RacesService: NSObject {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     
-                    var raceCalendar = Race(position: document.data()["position"] as! Int,name: document.data()["name"] as! String, date: document.data()["date"] as! String, dateStart: document.data()["dateStart"] as! String, dateEnd: document.data()["dateEnd"] as! String, country: document.data()["country"] as! String)
+                    var raceCalendar = Race()
+                    raceCalendar.position = document.data()["position"] as! Int
+                    raceCalendar.name = document.data()["name"] as! String
+                    raceCalendar.date = document.data()["date"] as! String
+                    raceCalendar.dateStart = document.data()["dateStart"] as! String
+                    raceCalendar.dateEnd = document.data()["dateEnd"] as! String
+                    raceCalendar.country = document.data()["country"] as! String
                     raceCalendar.distance = document.data()["distance"] as? Double ?? 0
                     raceCalendar.web = document.data()["web"] as? String ?? ""
                     raceCalendar.twitter = document.data()["twitter"] as? String ?? ""

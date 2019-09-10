@@ -6,4 +6,15 @@
 //  Copyright © 2019 JRLabs. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class TeamInfoViewController: UIViewController {
+    
+    var team = Team()
+    var season = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+}

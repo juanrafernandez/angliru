@@ -7,24 +7,113 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
+    @IBOutlet weak var imageViewUser: UIImageView!
+    @IBOutlet weak var textFieldUser: UITextField!
+    @IBOutlet weak var viewUserHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewMail: UIImageView!
+    @IBOutlet weak var textFieldMail: UITextField!
+    @IBOutlet weak var viewMailHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewPassword: UIImageView!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var viewPasswordHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonSignIn: UIButton!
+    @IBOutlet weak var buttonGoogleSignIn: UIButton!
+    @IBOutlet weak var buttonLogin: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initializeInterface()
+        GIDSignIn.sharedInstance()?.uiDelegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initializeInterface() {
+        navigationController?.navigationBar.isHidden = true
+        buttonLogin.layer.cornerRadius = 5
+        buttonGoogleSignIn.layer.cornerRadius = 5
+        textFieldUser.attributedPlaceholder = NSAttributedString(string: "usuario",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        textFieldMail.attributedPlaceholder = NSAttributedString(string: "mail",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        textFieldPassword.attributedPlaceholder = NSAttributedString(string: "contraseña",
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
-    */
-
+    
+    // MARK interface events
+    @IBAction func buttonSignIn_clicked(_ sender: Any) {
+        guard let email = textFieldMail.text else { return }
+        guard let password = textFieldPassword.text else { return }
+        guard let username = textFieldUser.text else { return }
+        
+        createUser(withEmail: email, password: password, username: username)
+    }
+    
+    @IBAction func buttonGoogleSignIn_clicked(_ sender: Any) {
+    GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    @IBAction func buttonLogin_clicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
+    // MARK: - API
+    
+    func createUser(withEmail email: String, password: String, username: String) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
+            if let error = error {
+                print("Failed to sign user up with error: ", error.localizedDescription)
+                return
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            UserDefaults.standard.set(uid, forKey: CURRENT_UID)
+            let values = ["email": email, "username": username]
+            
+            Firestore.firestore().collection("users").document(uid).setData([
+                "username":username,
+                "email":email
+                ], merge: true, completion: { (err) in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                        return
+                    } else {
+                        guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
+                        guard let controller = navController.viewControllers[0] as? AccessViewController else { return }
+                        //controller.configureViewComponents()
+                        
+                        // forgot to add this in video
+                        controller.loadUserData()
+                        
+                        self.dismiss(animated: true, completion: nil)
+                    }
+            })
+            
+       /* Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
+                if let error = error {
+                    print("Failed to update database values with error: ", error.localizedDescription)
+                    return
+                }
+                
+                guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
+                guard let controller = navController.viewControllers[0] as? AccessViewController else { return }
+                //controller.configureViewComponents()
+                
+                // forgot to add this in video
+                controller.loadUserData()
+                
+                self.dismiss(animated: true, completion: nil)
+            }) */
+            
+        }
+        
+    }
 }

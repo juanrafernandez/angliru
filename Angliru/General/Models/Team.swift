@@ -6,8 +6,19 @@
 //  Copyright © 2019 JRLabs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Team: NSObject {
-
+struct Team {
+    var name = ""
+    var country = ""
+    var category = ""
+    var teamImage = ""
+    var nameAbreviation = ""
+    var maillotImage = ""
+    var maillotBrand = ""
+    var bikeImage = ""
+    var bikeBrand = ""
+    var officialWeb = ""
+    var twitter = ""
+    var managerName = ""
 }

@@ -6,4 +6,12 @@
 //  Copyright © 2019 JRLabs. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class StageCell: UITableViewCell {
+    
+    @IBOutlet weak var imageViewStage: UIImageView!
+    @IBOutlet weak var labelStageName: UILabel!
+    @IBOutlet weak var buttonNext: UIButton!
+    
+}

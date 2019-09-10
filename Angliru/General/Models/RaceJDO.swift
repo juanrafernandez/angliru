@@ -6,4 +6,38 @@
 //  Copyright © 2019 JRLabs. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+
+class RaceJDO: Object {
+    @objc dynamic var season = ""
+    @objc dynamic var position = -1
+    @objc dynamic var name = ""
+    @objc dynamic var date = ""
+    @objc dynamic var dateStart = ""
+    @objc dynamic var dateEnd = ""
+    @objc dynamic var country = ""
+    @objc dynamic var distance = 0.0
+    @objc dynamic var web = ""
+    @objc dynamic var twitter = ""
+    @objc dynamic var altimetry = 0.0
+    @objc dynamic var profileImage = ""
+    var stages = List<String>()
+    var teams = List<String>()
+    //var classificationTypes = List<String>()
+    var racesResults = List<ResultsJDO>()
+    
+    override class func primaryKey() -> String? {
+        return "name"
+    }
+}
+
+class ResultsJDO : Object {
+    @objc dynamic var classificationType = ""
+    var results = List<ClassificationJDO>()
+    
+    convenience init (type : String, raceResults : List<ClassificationJDO>) {
+        self.init()
+        self.classificationType = type
+        self.results = raceResults
+    }
+}

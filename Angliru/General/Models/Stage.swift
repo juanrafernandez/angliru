@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+struct Stage {
+    var name = ""
+    var type = ""
+    var month = ""
+    var day = ""
+    var year = ""
+    var date = ""
+    var destiny = ""
+    var distance = ""
+    var origin = ""
+    var position = -1
+    var altimetry = ""
+    var result = Array<Classification>()
+    var profileImage = ""
+}

@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+struct Rider {
+    var name = ""
+    var country = ""
+    var birthPlace = ""
+    var age = ""
+    var dayOfBirth = ""
+    var monthOfBirth = ""
+    var yearOfBirth = ""
+    var height = ""
+    var weight = ""
+    var strava = ""
+    var twitter = ""
+    var photo = ""
+    var team = ""
+    var category = ""
+    var uci = ""
+}

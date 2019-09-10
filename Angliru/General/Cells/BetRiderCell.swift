@@ -6,4 +6,13 @@
 //  Copyright © 2019 JRLabs. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BetRiderCell: UITableViewCell {
+    
+    @IBOutlet weak var imageViewCountry: UIImageView!
+    @IBOutlet weak var labelName: UILabel!
+    
+    @IBOutlet weak var labelTeam: UILabel!
+    
+}

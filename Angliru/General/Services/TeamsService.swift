@@ -41,6 +41,7 @@ class TeamsService: NSObject {
                     }
                     teams.append(team)
                 }
+                
                 successBlock(teams)
             }
         }

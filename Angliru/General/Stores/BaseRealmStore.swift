@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
+
+class BaseRealmStore : NSObject {
+
+    let realm = try! Realm()
+
+    func removeDataBase() {
+        realm.beginWrite()
+        realm.deleteAll()
+        try! realm.commitWrite()
+    }
+}

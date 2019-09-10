@@ -7,14 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353463E122EA610800850C61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353463E022EA610800850C61 /* SignInViewController.swift */; };
+		353F89A422EBBE03009860EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F89A322EBBE03009860EB /* HomeViewController.swift */; };
+		3541D8DB22F245B200DF1EAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8DA22F245B200DF1EAF /* Constants.swift */; };
+		3541D8DE22F2460600DF1EAF /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8DD22F2460600DF1EAF /* Race.swift */; };
+		3541D8E022F2461C00DF1EAF /* RacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8DF22F2461C00DF1EAF /* RacesService.swift */; };
+		3541D8E222F2482100DF1EAF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8E122F2482100DF1EAF /* Stage.swift */; };
+		3541D8E422F2487300DF1EAF /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8E322F2487300DF1EAF /* Classification.swift */; };
+		3541D8E722F24E3900DF1EAF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541D8E622F24E3900DF1EAF /* Utils.swift */; };
+		35467DC022F997AE00E3BA18 /* RaceJDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DBF22F997AE00E3BA18 /* RaceJDO.swift */; };
+		35467DC222F998C300E3BA18 /* ClassificationJDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DC122F998C300E3BA18 /* ClassificationJDO.swift */; };
+		35467DC422F9997A00E3BA18 /* RiderJDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DC322F9997A00E3BA18 /* RiderJDO.swift */; };
+		35467DC622F99A8B00E3BA18 /* StageJDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DC522F99A8B00E3BA18 /* StageJDO.swift */; };
+		35467DC822F99A9800E3BA18 /* TeamJDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DC722F99A9800E3BA18 /* TeamJDO.swift */; };
+		35467DCB22F9BD7F00E3BA18 /* TeamsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DCA22F9BD7F00E3BA18 /* TeamsStore.swift */; };
+		35467DCD22F9BE5F00E3BA18 /* BaseRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DCC22F9BE5F00E3BA18 /* BaseRealmStore.swift */; };
+		3546954622F1A91E0003DCDC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546954522F1A91E0003DCDC /* CalendarViewController.swift */; };
+		3546954922F1AA020003DCDC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546954822F1AA020003DCDC /* CalendarCell.swift */; };
+		3546A55D22F457CB008284B3 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A55C22F457CB008284B3 /* StageViewController.swift */; };
+		3546A55F22F4581E008284B3 /* StagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A55E22F4581E008284B3 /* StagePresenter.swift */; };
+		3546A56122F4585D008284B3 /* StageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A56022F4585D008284B3 /* StageDataManager.swift */; };
+		354BE34722F8DEA30078EF9E /* RidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE34622F8DEA30078EF9E /* RidersViewController.swift */; };
+		354BE34922F8E3240078EF9E /* RidersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE34822F8E3240078EF9E /* RidersPresenter.swift */; };
+		354BE34B22F8E3390078EF9E /* RidersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE34A22F8E3390078EF9E /* RidersDataManager.swift */; };
+		354BE34D22F8E3ED0078EF9E /* RidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE34C22F8E3ED0078EF9E /* RidersService.swift */; };
+		354BE34F22F8EA320078EF9E /* RiderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BE34E22F8EA320078EF9E /* RiderInfoViewController.swift */; };
+		354E655822FA2D8C00AC02BA /* RidersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E655722FA2D8C00AC02BA /* RidersStore.swift */; };
+		354E655A22FA345700AC02BA /* RacesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354E655922FA345700AC02BA /* RacesStore.swift */; };
+		354EE8DA22F39BCA00A9534D /* ClassificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EE8D922F39BCA00A9534D /* ClassificationViewController.swift */; };
+		354EE8DC22F39C0C00A9534D /* ClassificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EE8DB22F39C0C00A9534D /* ClassificationPresenter.swift */; };
+		354EE8DE22F39C2500A9534D /* ClassificationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EE8DD22F39C2500A9534D /* ClassificationDataManager.swift */; };
+		354EE8E122F3A74200A9534D /* ClassificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EE8DF22F3A74100A9534D /* ClassificationCell.swift */; };
+		354EE8E222F3A74200A9534D /* ClassificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 354EE8E022F3A74200A9534D /* ClassificationCell.xib */; };
+		354EF4B722EC79CF00E16FD2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EF4B622EC79CF00E16FD2 /* MenuViewController.swift */; };
+		3551947B2327B21A00084E96 /* BetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551947A2327B21A00084E96 /* BetsPresenter.swift */; };
+		3551947E2327B23D00084E96 /* BetsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551947D2327B23D00084E96 /* BetsDataManager.swift */; };
+		355194802327B39900084E96 /* BetsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551947F2327B39900084E96 /* BetsStore.swift */; };
+		355194822327B3E100084E96 /* BetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355194812327B3E100084E96 /* BetsService.swift */; };
+		3552114E22F2DADB001D8FAA /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552114D22F2DADB001D8FAA /* CalendarPresenter.swift */; };
+		3552115022F2DAEF001D8FAA /* CalendarDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552114F22F2DAEF001D8FAA /* CalendarDataManager.swift */; };
+		3552115222F34416001D8FAA /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3552115122F34416001D8FAA /* StageCell.swift */; };
 		3553C46E22E9B6C200214E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553C46D22E9B6C200214E10 /* AppDelegate.swift */; };
 		3553C47022E9B6C200214E10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553C46F22E9B6C200214E10 /* ViewController.swift */; };
 		3553C47322E9B6C200214E10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3553C47122E9B6C200214E10 /* Main.storyboard */; };
 		3553C47522E9B6C400214E10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3553C47422E9B6C400214E10 /* Assets.xcassets */; };
 		3553C47822E9B6C400214E10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3553C47622E9B6C400214E10 /* LaunchScreen.storyboard */; };
+		3553C48022E9C7EA00214E10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3553C47F22E9C7EA00214E10 /* GoogleService-Info.plist */; };
+		3553C48822E9C9E700214E10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553C48722E9C9E700214E10 /* LoginViewController.swift */; };
+		3553C48C22E9CAA400214E10 /* AccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553C48B22E9CAA400214E10 /* AccessViewController.swift */; };
+		3554C6B122F87ED80004D288 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6B022F87ED80004D288 /* TeamsViewController.swift */; };
+		3554C6B322F87FB40004D288 /* TeamsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6B222F87FB40004D288 /* TeamsPresenter.swift */; };
+		3554C6B522F87FC90004D288 /* TeamsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6B422F87FC90004D288 /* TeamsDataManager.swift */; };
+		3554C6B722F880940004D288 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6B622F880940004D288 /* Team.swift */; };
+		3554C6B922F881560004D288 /* TeamsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6B822F881560004D288 /* TeamsService.swift */; };
+		3554C6BB22F886E50004D288 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6BA22F886E50004D288 /* TeamInfoViewController.swift */; };
+		3554C6BD22F88A360004D288 /* Rider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554C6BC22F88A360004D288 /* Rider.swift */; };
+		35561AED232659F6001B7676 /* BetsRidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35561AEC232659F6001B7676 /* BetsRidersViewController.swift */; };
+		3559C55923227C5400C32A9A /* BetRiderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3559C55823227C5400C32A9A /* BetRiderCell.xib */; };
+		3559C55B232283C600C32A9A /* BetRiderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559C55A232283C600C32A9A /* BetRiderCell.swift */; };
+		3559C55D232284AF00C32A9A /* BetsTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559C55C232284AF00C32A9A /* BetsTeamsViewController.swift */; };
+		95B9CFA7E5D68720D706CDF9 /* Pods_Angliru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E030E495395C7A035D0B0E5 /* Pods_Angliru.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		353463E022EA610800850C61 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		353F89A322EBBE03009860EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3541D8DA22F245B200DF1EAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3541D8DD22F2460600DF1EAF /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		3541D8DF22F2461C00DF1EAF /* RacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesService.swift; sourceTree = "<group>"; };
+		3541D8E122F2482100DF1EAF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		3541D8E322F2487300DF1EAF /* Classification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
+		3541D8E622F24E3900DF1EAF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		35467DBF22F997AE00E3BA18 /* RaceJDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceJDO.swift; sourceTree = "<group>"; };
+		35467DC122F998C300E3BA18 /* ClassificationJDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationJDO.swift; sourceTree = "<group>"; };
+		35467DC322F9997A00E3BA18 /* RiderJDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderJDO.swift; sourceTree = "<group>"; };
+		35467DC522F99A8B00E3BA18 /* StageJDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageJDO.swift; sourceTree = "<group>"; };
+		35467DC722F99A9800E3BA18 /* TeamJDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamJDO.swift; sourceTree = "<group>"; };
+		35467DCA22F9BD7F00E3BA18 /* TeamsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStore.swift; sourceTree = "<group>"; };
+		35467DCC22F9BE5F00E3BA18 /* BaseRealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmStore.swift; sourceTree = "<group>"; };
+		3546954522F1A91E0003DCDC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3546954822F1AA020003DCDC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		3546A55C22F457CB008284B3 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
+		3546A55E22F4581E008284B3 /* StagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagePresenter.swift; sourceTree = "<group>"; };
+		3546A56022F4585D008284B3 /* StageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDataManager.swift; sourceTree = "<group>"; };
+		354BE34622F8DEA30078EF9E /* RidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersViewController.swift; sourceTree = "<group>"; };
+		354BE34822F8E3240078EF9E /* RidersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersPresenter.swift; sourceTree = "<group>"; };
+		354BE34A22F8E3390078EF9E /* RidersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersDataManager.swift; sourceTree = "<group>"; };
+		354BE34C22F8E3ED0078EF9E /* RidersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersService.swift; sourceTree = "<group>"; };
+		354BE34E22F8EA320078EF9E /* RiderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderInfoViewController.swift; sourceTree = "<group>"; };
+		354E655722FA2D8C00AC02BA /* RidersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersStore.swift; sourceTree = "<group>"; };
+		354E655922FA345700AC02BA /* RacesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesStore.swift; sourceTree = "<group>"; };
+		354EE8D922F39BCA00A9534D /* ClassificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewController.swift; sourceTree = "<group>"; };
+		354EE8DB22F39C0C00A9534D /* ClassificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationPresenter.swift; sourceTree = "<group>"; };
+		354EE8DD22F39C2500A9534D /* ClassificationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationDataManager.swift; sourceTree = "<group>"; };
+		354EE8DF22F3A74100A9534D /* ClassificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationCell.swift; sourceTree = "<group>"; };
+		354EE8E022F3A74200A9534D /* ClassificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassificationCell.xib; sourceTree = "<group>"; };
+		354EF4B622EC79CF00E16FD2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3551947A2327B21A00084E96 /* BetsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsPresenter.swift; sourceTree = "<group>"; };
+		3551947D2327B23D00084E96 /* BetsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsDataManager.swift; sourceTree = "<group>"; };
+		3551947F2327B39900084E96 /* BetsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsStore.swift; sourceTree = "<group>"; };
+		355194812327B3E100084E96 /* BetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsService.swift; sourceTree = "<group>"; };
+		3552114D22F2DADB001D8FAA /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
+		3552114F22F2DAEF001D8FAA /* CalendarDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataManager.swift; sourceTree = "<group>"; };
+		3552115122F34416001D8FAA /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
+		3552C2B8231561D700E22338 /* Angliru.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Angliru.entitlements; sourceTree = "<group>"; };
 		3553C46A22E9B6C200214E10 /* Angliru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Angliru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3553C46D22E9B6C200214E10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3553C46F22E9B6C200214E10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +118,23 @@
 		3553C47422E9B6C400214E10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3553C47722E9B6C400214E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3553C47922E9B6C400214E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3553C47F22E9C7EA00214E10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3553C48722E9C9E700214E10 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3553C48B22E9CAA400214E10 /* AccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessViewController.swift; sourceTree = "<group>"; };
+		3554C6B022F87ED80004D288 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		3554C6B222F87FB40004D288 /* TeamsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPresenter.swift; sourceTree = "<group>"; };
+		3554C6B422F87FC90004D288 /* TeamsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsDataManager.swift; sourceTree = "<group>"; };
+		3554C6B622F880940004D288 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		3554C6B822F881560004D288 /* TeamsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsService.swift; sourceTree = "<group>"; };
+		3554C6BA22F886E50004D288 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
+		3554C6BC22F88A360004D288 /* Rider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rider.swift; sourceTree = "<group>"; };
+		35561AEC232659F6001B7676 /* BetsRidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsRidersViewController.swift; sourceTree = "<group>"; };
+		3559C55823227C5400C32A9A /* BetRiderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetRiderCell.xib; sourceTree = "<group>"; };
+		3559C55A232283C600C32A9A /* BetRiderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRiderCell.swift; sourceTree = "<group>"; };
+		3559C55C232284AF00C32A9A /* BetsTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsTeamsViewController.swift; sourceTree = "<group>"; };
+		9E030E495395C7A035D0B0E5 /* Pods_Angliru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angliru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC53CF76B0B3DCCE977B508 /* Pods-Angliru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angliru.release.xcconfig"; path = "Target Support Files/Pods-Angliru/Pods-Angliru.release.xcconfig"; sourceTree = "<group>"; };
+		C39BC48BBC1BF984721CFB77 /* Pods-Angliru.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angliru.debug.xcconfig"; path = "Target Support Files/Pods-Angliru/Pods-Angliru.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +142,346 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B9CFA7E5D68720D706CDF9 /* Pods_Angliru.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1576D7C466FE44761CA025E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E030E495395C7A035D0B0E5 /* Pods_Angliru.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		353463DC22EA607E00850C61 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				353463DF22EA60D400850C61 /* DataManager */,
+				353463DE22EA60C900850C61 /* Presenter */,
+				353463DD22EA60AC00850C61 /* ViewController */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		353463DD22EA60AC00850C61 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				353463E022EA610800850C61 /* SignInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		353463DE22EA60C900850C61 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		353463DF22EA60D400850C61 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		353F899F22EBBDA0009860EB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				353F89A222EBBDC6009860EB /* DataManager */,
+				353F89A122EBBDBA009860EB /* Presenter */,
+				353F89A022EBBDAB009860EB /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		353F89A022EBBDAB009860EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				353F89A322EBBE03009860EB /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		353F89A122EBBDBA009860EB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		353F89A222EBBDC6009860EB /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3541D8D822F2457300DF1EAF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3541D8DA22F245B200DF1EAF /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3541D8D922F2458600DF1EAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3541D8DF22F2461C00DF1EAF /* RacesService.swift */,
+				3554C6B822F881560004D288 /* TeamsService.swift */,
+				354BE34C22F8E3ED0078EF9E /* RidersService.swift */,
+				355194812327B3E100084E96 /* BetsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3541D8DC22F245F300DF1EAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3541D8E322F2487300DF1EAF /* Classification.swift */,
+				35467DC122F998C300E3BA18 /* ClassificationJDO.swift */,
+				3541D8DD22F2460600DF1EAF /* Race.swift */,
+				35467DBF22F997AE00E3BA18 /* RaceJDO.swift */,
+				3554C6BC22F88A360004D288 /* Rider.swift */,
+				35467DC322F9997A00E3BA18 /* RiderJDO.swift */,
+				3541D8E122F2482100DF1EAF /* Stage.swift */,
+				35467DC522F99A8B00E3BA18 /* StageJDO.swift */,
+				3554C6B622F880940004D288 /* Team.swift */,
+				35467DC722F99A9800E3BA18 /* TeamJDO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3541D8E522F24DAE00DF1EAF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3541D8E622F24E3900DF1EAF /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		35467DC922F9BD5400E3BA18 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				35467DCC22F9BE5F00E3BA18 /* BaseRealmStore.swift */,
+				354E655722FA2D8C00AC02BA /* RidersStore.swift */,
+				35467DCA22F9BD7F00E3BA18 /* TeamsStore.swift */,
+				354E655922FA345700AC02BA /* RacesStore.swift */,
+				3551947F2327B39900084E96 /* BetsStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		3546954122F1A8EF0003DCDC /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3546954422F1A9020003DCDC /* DataManager */,
+				3546954322F1A8FC0003DCDC /* Presenter */,
+				3546954222F1A8F40003DCDC /* ViewController */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		3546954222F1A8F40003DCDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3546954522F1A91E0003DCDC /* CalendarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3546954322F1A8FC0003DCDC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3552114D22F2DADB001D8FAA /* CalendarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3546954422F1A9020003DCDC /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3552114F22F2DAEF001D8FAA /* CalendarDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3546954722F1A9ED0003DCDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				354EE8DF22F3A74100A9534D /* ClassificationCell.swift */,
+				354EE8E022F3A74200A9534D /* ClassificationCell.xib */,
+				3546954822F1AA020003DCDC /* CalendarCell.swift */,
+				3552115122F34416001D8FAA /* StageCell.swift */,
+				3559C55823227C5400C32A9A /* BetRiderCell.xib */,
+				3559C55A232283C600C32A9A /* BetRiderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3546A55822F456D9008284B3 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				3546A55B22F45703008284B3 /* DataManager */,
+				3546A55A22F456F9008284B3 /* Presenter */,
+				3546A55922F456E4008284B3 /* ViewController */,
+			);
+			path = Stage;
+			sourceTree = "<group>";
+		};
+		3546A55922F456E4008284B3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3546A55C22F457CB008284B3 /* StageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3546A55A22F456F9008284B3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3546A55E22F4581E008284B3 /* StagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3546A55B22F45703008284B3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3546A56022F4585D008284B3 /* StageDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		354BE34222F8DE450078EF9E /* Riders */ = {
+			isa = PBXGroup;
+			children = (
+				354BE34522F8DE6A0078EF9E /* DataManager */,
+				354BE34422F8DE5D0078EF9E /* Presenter */,
+				354BE34322F8DE500078EF9E /* ViewController */,
+			);
+			path = Riders;
+			sourceTree = "<group>";
+		};
+		354BE34322F8DE500078EF9E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				354BE34622F8DEA30078EF9E /* RidersViewController.swift */,
+				354BE34E22F8EA320078EF9E /* RiderInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		354BE34422F8DE5D0078EF9E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				354BE34822F8E3240078EF9E /* RidersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		354BE34522F8DE6A0078EF9E /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				354BE34A22F8E3390078EF9E /* RidersDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		354EE8D522F39B2400A9534D /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				354EE8D822F39B4C00A9534D /* DataManager */,
+				354EE8D722F39B3F00A9534D /* Presenter */,
+				354EE8D622F39B2E00A9534D /* ViewController */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		354EE8D622F39B2E00A9534D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				354EE8D922F39BCA00A9534D /* ClassificationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		354EE8D722F39B3F00A9534D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				354EE8DB22F39C0C00A9534D /* ClassificationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		354EE8D822F39B4C00A9534D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				354EE8DD22F39C2500A9534D /* ClassificationDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		354EF4B222EC79A400E16FD2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				354EF4B522EC79BA00E16FD2 /* DataManager */,
+				354EF4B422EC79B300E16FD2 /* Presenter */,
+				354EF4B322EC79AB00E16FD2 /* ViewController */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		354EF4B322EC79AB00E16FD2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				354EF4B622EC79CF00E16FD2 /* MenuViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		354EF4B422EC79B300E16FD2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		354EF4B522EC79BA00E16FD2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		355194792327B1CF00084E96 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3551947A2327B21A00084E96 /* BetsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3551947C2327B22200084E96 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3551947D2327B23D00084E96 /* BetsDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		3553C46122E9B6C200214E10 = {
 			isa = PBXGroup;
 			children = (
 				3553C46C22E9B6C200214E10 /* Angliru */,
 				3553C46B22E9B6C200214E10 /* Products */,
+				925F5B55B380D1C7CBD1198B /* Pods */,
+				1576D7C466FE44761CA025E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +496,152 @@
 		3553C46C22E9B6C200214E10 /* Angliru */ = {
 			isa = PBXGroup;
 			children = (
+				3552C2B8231561D700E22338 /* Angliru.entitlements */,
+				3553C48222E9C98500214E10 /* Modules */,
+				3553C48122E9C96700214E10 /* General */,
 				3553C46D22E9B6C200214E10 /* AppDelegate.swift */,
 				3553C46F22E9B6C200214E10 /* ViewController.swift */,
 				3553C47122E9B6C200214E10 /* Main.storyboard */,
 				3553C47422E9B6C400214E10 /* Assets.xcassets */,
 				3553C47622E9B6C400214E10 /* LaunchScreen.storyboard */,
 				3553C47922E9B6C400214E10 /* Info.plist */,
+				3553C47F22E9C7EA00214E10 /* GoogleService-Info.plist */,
 			);
 			path = Angliru;
+			sourceTree = "<group>";
+		};
+		3553C48122E9C96700214E10 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				35467DC922F9BD5400E3BA18 /* Stores */,
+				3541D8E522F24DAE00DF1EAF /* Utils */,
+				3541D8DC22F245F300DF1EAF /* Models */,
+				3541D8D922F2458600DF1EAF /* Services */,
+				3541D8D822F2457300DF1EAF /* Constants */,
+				3546954722F1A9ED0003DCDC /* Cells */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		3553C48222E9C98500214E10 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3559C55623227AF800C32A9A /* Bets */,
+				354BE34222F8DE450078EF9E /* Riders */,
+				3554C6AC22F87EA30004D288 /* Teams */,
+				3546A55822F456D9008284B3 /* Stage */,
+				354EE8D522F39B2400A9534D /* Classification */,
+				3546954122F1A8EF0003DCDC /* Calendar */,
+				354EF4B222EC79A400E16FD2 /* Menu */,
+				353F899F22EBBDA0009860EB /* Home */,
+				353463DC22EA607E00850C61 /* SignIn */,
+				3553C48922E9CA5900214E10 /* Access */,
+				3553C48322E9C99A00214E10 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3553C48322E9C99A00214E10 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3553C48622E9C9BB00214E10 /* DataManager */,
+				3553C48522E9C9B300214E10 /* Presenter */,
+				3553C48422E9C9AA00214E10 /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3553C48422E9C9AA00214E10 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3553C48722E9C9E700214E10 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3553C48522E9C9B300214E10 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3553C48622E9C9BB00214E10 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3553C48922E9CA5900214E10 /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				3553C48B22E9CAA400214E10 /* AccessViewController.swift */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
+		3554C6AC22F87EA30004D288 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				3554C6AF22F87EBA0004D288 /* DataManager */,
+				3554C6AE22F87EB20004D288 /* Presenter */,
+				3554C6AD22F87EAA0004D288 /* ViewController */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		3554C6AD22F87EAA0004D288 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3554C6B022F87ED80004D288 /* TeamsViewController.swift */,
+				3554C6BA22F886E50004D288 /* TeamInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3554C6AE22F87EB20004D288 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3554C6B222F87FB40004D288 /* TeamsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3554C6AF22F87EBA0004D288 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3554C6B422F87FC90004D288 /* TeamsDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		3559C55623227AF800C32A9A /* Bets */ = {
+			isa = PBXGroup;
+			children = (
+				3551947C2327B22200084E96 /* DataManager */,
+				355194792327B1CF00084E96 /* Presenter */,
+				3559C55723227AFF00C32A9A /* ViewController */,
+			);
+			path = Bets;
+			sourceTree = "<group>";
+		};
+		3559C55723227AFF00C32A9A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3559C55C232284AF00C32A9A /* BetsTeamsViewController.swift */,
+				35561AEC232659F6001B7676 /* BetsRidersViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		925F5B55B380D1C7CBD1198B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C39BC48BBC1BF984721CFB77 /* Pods-Angliru.debug.xcconfig */,
+				9FC53CF76B0B3DCCE977B508 /* Pods-Angliru.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +651,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3553C47C22E9B6C400214E10 /* Build configuration list for PBXNativeTarget "Angliru" */;
 			buildPhases = (
+				B8D318FB7992FE92DD958DE0 /* [CP] Check Pods Manifest.lock */,
 				3553C46622E9B6C200214E10 /* Sources */,
 				3553C46722E9B6C200214E10 /* Frameworks */,
 				3553C46822E9B6C200214E10 /* Resources */,
+				3D11C232C8846619B1FB3727 /* [CP] Embed Pods Frameworks */,
+				D35897491D87B3EE1010F52B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +679,14 @@
 				TargetAttributes = {
 					3553C46922E9B6C200214E10 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,21 +713,178 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3559C55923227C5400C32A9A /* BetRiderCell.xib in Resources */,
 				3553C47822E9B6C400214E10 /* LaunchScreen.storyboard in Resources */,
+				3553C48022E9C7EA00214E10 /* GoogleService-Info.plist in Resources */,
 				3553C47522E9B6C400214E10 /* Assets.xcassets in Resources */,
+				354EE8E222F3A74200A9534D /* ClassificationCell.xib in Resources */,
 				3553C47322E9B6C200214E10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D11C232C8846619B1FB3727 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Angliru/Pods-Angliru-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BTNavigationDropdownMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Angliru/Pods-Angliru-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D318FB7992FE92DD958DE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Angliru-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D35897491D87B3EE1010F52B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Angliru/Pods-Angliru-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Angliru/Pods-Angliru-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3553C46622E9B6C200214E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354E655822FA2D8C00AC02BA /* RidersStore.swift in Sources */,
+				354BE34B22F8E3390078EF9E /* RidersDataManager.swift in Sources */,
+				3546A56122F4585D008284B3 /* StageDataManager.swift in Sources */,
+				354EE8DC22F39C0C00A9534D /* ClassificationPresenter.swift in Sources */,
+				3554C6B722F880940004D288 /* Team.swift in Sources */,
+				3552115222F34416001D8FAA /* StageCell.swift in Sources */,
+				3552115022F2DAEF001D8FAA /* CalendarDataManager.swift in Sources */,
+				3546A55F22F4581E008284B3 /* StagePresenter.swift in Sources */,
+				3541D8E022F2461C00DF1EAF /* RacesService.swift in Sources */,
+				3541D8DE22F2460600DF1EAF /* Race.swift in Sources */,
+				3546954622F1A91E0003DCDC /* CalendarViewController.swift in Sources */,
+				3553C48822E9C9E700214E10 /* LoginViewController.swift in Sources */,
+				35467DC622F99A8B00E3BA18 /* StageJDO.swift in Sources */,
+				3552114E22F2DADB001D8FAA /* CalendarPresenter.swift in Sources */,
+				35467DC422F9997A00E3BA18 /* RiderJDO.swift in Sources */,
+				3559C55D232284AF00C32A9A /* BetsTeamsViewController.swift in Sources */,
+				354BE34722F8DEA30078EF9E /* RidersViewController.swift in Sources */,
 				3553C47022E9B6C200214E10 /* ViewController.swift in Sources */,
+				354EE8E122F3A74200A9534D /* ClassificationCell.swift in Sources */,
+				3541D8E722F24E3900DF1EAF /* Utils.swift in Sources */,
+				35467DC822F99A9800E3BA18 /* TeamJDO.swift in Sources */,
+				35561AED232659F6001B7676 /* BetsRidersViewController.swift in Sources */,
+				354BE34922F8E3240078EF9E /* RidersPresenter.swift in Sources */,
+				3553C48C22E9CAA400214E10 /* AccessViewController.swift in Sources */,
+				3546A55D22F457CB008284B3 /* StageViewController.swift in Sources */,
+				3546954922F1AA020003DCDC /* CalendarCell.swift in Sources */,
+				3541D8DB22F245B200DF1EAF /* Constants.swift in Sources */,
+				3551947E2327B23D00084E96 /* BetsDataManager.swift in Sources */,
+				354EF4B722EC79CF00E16FD2 /* MenuViewController.swift in Sources */,
+				3541D8E422F2487300DF1EAF /* Classification.swift in Sources */,
+				354EE8DA22F39BCA00A9534D /* ClassificationViewController.swift in Sources */,
+				3559C55B232283C600C32A9A /* BetRiderCell.swift in Sources */,
+				3554C6B522F87FC90004D288 /* TeamsDataManager.swift in Sources */,
+				35467DC222F998C300E3BA18 /* ClassificationJDO.swift in Sources */,
+				3554C6B922F881560004D288 /* TeamsService.swift in Sources */,
+				353463E122EA610800850C61 /* SignInViewController.swift in Sources */,
+				3554C6B322F87FB40004D288 /* TeamsPresenter.swift in Sources */,
+				354BE34F22F8EA320078EF9E /* RiderInfoViewController.swift in Sources */,
+				354BE34D22F8E3ED0078EF9E /* RidersService.swift in Sources */,
 				3553C46E22E9B6C200214E10 /* AppDelegate.swift in Sources */,
+				354EE8DE22F39C2500A9534D /* ClassificationDataManager.swift in Sources */,
+				3551947B2327B21A00084E96 /* BetsPresenter.swift in Sources */,
+				35467DC022F997AE00E3BA18 /* RaceJDO.swift in Sources */,
+				3554C6B122F87ED80004D288 /* TeamsViewController.swift in Sources */,
+				3554C6BD22F88A360004D288 /* Rider.swift in Sources */,
+				353F89A422EBBE03009860EB /* HomeViewController.swift in Sources */,
+				35467DCD22F9BE5F00E3BA18 /* BaseRealmStore.swift in Sources */,
+				3541D8E222F2482100DF1EAF /* Stage.swift in Sources */,
+				35467DCB22F9BD7F00E3BA18 /* TeamsStore.swift in Sources */,
+				355194802327B39900084E96 /* BetsStore.swift in Sources */,
+				355194822327B3E100084E96 /* BetsService.swift in Sources */,
+				354E655A22FA345700AC02BA /* RacesStore.swift in Sources */,
+				3554C6BB22F886E50004D288 /* TeamInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +1028,14 @@
 		};
 		3553C47D22E9B6C400214E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39BC48BBC1BF984721CFB77 /* Pods-Angliru.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Angliru/Angliru.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLWHC69S9M;
 				INFOPLIST_FILE = Angliru/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +1049,14 @@
 		};
 		3553C47E22E9B6C400214E10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC53CF76B0B3DCCE977B508 /* Pods-Angliru.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Angliru/Angliru.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLWHC69S9M;
 				INFOPLIST_FILE = Angliru/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
