@@ -12,7 +12,7 @@ class ClassificationDataManager: NSObject {
     let racesService : RacesService!
     let racesStore : RacesStore!
     
-    var serverSynchronized = true
+    var serverSynchronized = false
     
     override init() {
         racesService = RacesService()
@@ -40,7 +40,22 @@ class ClassificationDataManager: NSObject {
     }
     
     func getTeamRidersByRace(season: String, teamName: String, raceName: String, success successBlock: @escaping ((Array<Classification>) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
-        successBlock(racesStore.getRaceTeamsRiders(season: season, raceName: raceName, teamName: teamName))
+        let results = racesStore.getRaceTeamsRiders(season: season, raceName: raceName, teamName: teamName)
+        if results.count > 0 {
+            successBlock(results)
+        } else {
+            racesService.getTeamRidersByRace(season: season, teamName: teamName, raceName: raceName, success: { (result) in
+                // TODO -> Arreglar - en caché se guardan clasificaciones completas -
+                /*if result.count > 0 {
+                    self.racesStore.saveRaceClassification(raceName: raceName, type: "GC", season: season, results: result)
+                }*/
+                
+                successBlock(result)
+            }) { (error) in
+                failureBlock(error)
+            }
+            
+        }
     }
     
 }

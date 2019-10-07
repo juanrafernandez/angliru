@@ -15,7 +15,7 @@ class RacesService: NSObject {
         let db = Firestore.firestore()
         var races = Array<Race>()
         
-        let docRef = db.collection("calendar").document(season).collection("UCI Worldtour")
+        let docRef = db.collection("calendar").document(season).collection(CATEGORY_WORLDTOUR)
         
         docRef.getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -189,6 +189,36 @@ class RacesService: NSObject {
                     result.teamAbreviation = document.data()["teamAbreviation"] as! String
                     result.time = document.data()["time"] as! String
                     results.append(result)
+                }
+                successBlock(results)
+            }
+        }
+    }
+    
+    func getTeamRidersByRace(season: String, teamName: String, raceName: String, success successBlock: @escaping ((Array<Classification>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+        let db = Firestore.firestore()
+        
+        var results = Array<Classification>()
+        let docRefs = db.collection("races").document(raceName).collection(season).document("classifications").collection("GC")
+        
+        docRefs.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                failureBlock(err)
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let team = document.data()["team"] as! String
+                    if team == teamName {
+                        var result = Classification()
+                        result.country = document.data()["country"] as! String
+                        result.name = document.data()["name"] as! String
+                        result.points = document.data()["points"] as! String
+                        result.team = document.data()["team"] as! String
+                        result.teamAbreviation = document.data()["teamAbreviation"] as! String
+                        result.time = document.data()["time"] as! String
+                        results.append(result)
+                    }
                 }
                 successBlock(results)
             }

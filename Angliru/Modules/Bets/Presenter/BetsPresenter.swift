@@ -10,11 +10,14 @@ import Foundation
 
 protocol BetsPresenterInput {
     func saveBet(raceName: String, riderName: String, season:String, typeBet: String)
+    func getBetsOpen(season:String, raceName:String)
 }
 
 protocol BetsPresenterOutput {
     func presenterDidSaveBet()
     func presenterDidSaveBetError(error:Error)
+    func presenterGetBetsOpen(result: Bool)
+    func presenterGetBetsOpenError(error: Error)
 }
 
 class BetsPresenter: NSObject, BetsPresenterInput {
@@ -31,6 +34,14 @@ class BetsPresenter: NSObject, BetsPresenterInput {
             self.output.presenterDidSaveBet()
         }) { (error) in
             self.output.presenterDidSaveBetError(error: error)
+        }
+    }
+    
+    func getBetsOpen(season:String, raceName:String) {
+        dataManager.getBetsOpen(season: season, raceName: raceName, success: { (result) in
+            self.output.presenterGetBetsOpen(result: result)
+        }) { (error) in
+            self.output.presenterGetBetsOpenError(error: error)
         }
     }
 }

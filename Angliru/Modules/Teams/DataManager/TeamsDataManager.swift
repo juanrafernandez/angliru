@@ -20,8 +20,20 @@ class TeamsDataManager: NSObject {
     }
     
     func getTeams(season: String, category: String,success successBlock: @escaping ((Array<Team>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
-        if serverSynchronized == true {
+        /*if serverSynchronized == true {
             successBlock(teamsStore.getTeams(season: season, category: category))
+        } else {
+            teamsService.getTeams(season: season, category: category, success: { (result : Array<Team>) in
+                self.teamsStore.saveTeams(teams: result, category: category, season: season)
+                successBlock(result)
+            }) { (err: Error) in
+                failureBlock(err)
+            }
+        }*/
+        
+        let results = teamsStore.getTeams(season: season, category: category)
+        if results.count > 0 {
+            successBlock(results)
         } else {
             teamsService.getTeams(season: season, category: category, success: { (result : Array<Team>) in
                 self.teamsStore.saveTeams(teams: result, category: category, season: season)

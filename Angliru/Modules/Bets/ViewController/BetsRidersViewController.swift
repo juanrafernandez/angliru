@@ -14,6 +14,7 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonSave: UIButton!
+    
     var team = ""
     var race = Race()
     var season = ""
@@ -36,6 +37,7 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func reloadInfo() {
         SVProgressHUD.show()
+        presenter.getBetsOpen(season: season, raceName: race.name)
         presenterClassification.getTeamRidersByRace(season: season, teamName: team, raceName: race.name)
         tableView.reloadData()
     }
@@ -74,14 +76,14 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
         for row in 0..<numberOfRows {
             if let cell = tableView.cellForRow(at: NSIndexPath(row: row, section: indexPath.section) as IndexPath) {
                 cell.accessoryType = .none
-                buttonSave.isEnabled = false
+                //buttonSave.isEnabled = false
             }
         }
         
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
-                buttonSave.isEnabled = true
+                //buttonSave.isEnabled = true
                 selectedRider = riders[indexPath.row]
             } else {
                 cell.accessoryType = .none
@@ -121,6 +123,14 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func presenterDidSaveBetError(error: Error) {
         SVProgressHUD.dismiss()
+    }
+    
+    func presenterGetBetsOpen(result: Bool) {
+        buttonSave.isEnabled = result
+    }
+    
+    func presenterGetBetsOpenError(error: Error) {
+        
     }
 }
 

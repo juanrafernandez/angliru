@@ -30,4 +30,24 @@ class BetsService: NSObject {
                 }
         })
     }
+    
+    func getBetsOpen(season:String, raceName:String, success successBlock: @escaping ((Bool) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+        
+        let db = Firestore.firestore()
+        let docRef = db.collection("races").document(raceName).collection(season).document("bets")
+        
+        docRef.getDocument() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                failureBlock(err)
+            } else {
+                print(querySnapshot!.documentID)
+                var result = false
+                if querySnapshot!.data() != nil {
+                    result = querySnapshot?.data()!["open"] as? Bool ?? false
+                }
+                successBlock(result)
+            }
+        }
+    }
 }

@@ -42,7 +42,7 @@
                   moduleName = "Angliru"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/SignIn/ViewController/SignInViewController.swift"
-                  timestampString = "589816090.63406"
+                  timestampString = "591812252.831845"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -57,7 +57,7 @@
                   moduleName = "Angliru"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/SignIn/ViewController/SignInViewController.swift"
-                  timestampString = "589816090.63659"
+                  timestampString = "591812252.838626"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
@@ -474,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Teams/DataManager/TeamsDataManager.swift"
-            timestampString = "589740967.370378"
+            timestampString = "591812252.270537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -522,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Teams/DataManager/TeamsDataManager.swift"
-            timestampString = "589740967.3704441"
+            timestampString = "591812252.270623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Teams/DataManager/TeamsDataManager.swift"
-            timestampString = "589740967.37049"
+            timestampString = "591812252.270684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Teams/DataManager/TeamsDataManager.swift"
-            timestampString = "589740967.370589"
+            timestampString = "591812252.2707911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -714,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Calendar/DataManager/CalendarDataManager.swift"
-            timestampString = "589740967.37071"
+            timestampString = "591812252.270913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -730,7 +730,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098098"
+            timestampString = "589999890.361142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -746,7 +746,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098197"
+            timestampString = "589999890.36121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -762,7 +762,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.0982569"
+            timestampString = "589999890.361256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -778,7 +778,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098312"
+            timestampString = "589999890.361298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -826,7 +826,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098366"
+            timestampString = "589999890.361338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -874,7 +874,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098424"
+            timestampString = "589999890.361379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -890,7 +890,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.0985349"
+            timestampString = "590000024.430182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -906,7 +906,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098611"
+            timestampString = "589999890.3614661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -922,7 +922,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.0986691"
+            timestampString = "589999890.361505"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
@@ -938,7 +938,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.098721"
+            timestampString = "590000024.430326"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -1002,7 +1002,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.098914"
+            timestampString = "589999890.361679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -1050,7 +1050,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.0989619"
+            timestampString = "589999890.361766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -1066,7 +1066,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099009"
+            timestampString = "589999890.361881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -1114,7 +1114,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099054"
+            timestampString = "589999890.3619339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -1130,7 +1130,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.0991679"
+            timestampString = "589999890.36198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -1146,7 +1146,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099223"
+            timestampString = "589999890.362025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -1194,7 +1194,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099368"
+            timestampString = "589999890.3621401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
@@ -1210,7 +1210,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099414"
+            timestampString = "589999890.362185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -1226,7 +1226,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099494"
+            timestampString = "589999890.362227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -1434,7 +1434,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.0998681"
+            timestampString = "590000024.4310189"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -1450,7 +1450,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.09992"
+            timestampString = "590000024.431069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -1466,7 +1466,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.099968"
+            timestampString = "589999890.362635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -1482,7 +1482,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.100019"
+            timestampString = "589999890.362675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -1498,7 +1498,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.100121"
+            timestampString = "589999890.362715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -1510,11 +1510,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
-            timestampString = "589816090.1001869"
+            timestampString = "589999890.362754"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -1530,7 +1530,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.100243"
+            timestampString = "590000024.431222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -1546,7 +1546,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
-            timestampString = "589816090.100289"
+            timestampString = "590000024.431267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -1562,11 +1562,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
-            timestampString = "589816090.100341"
+            timestampString = "591787953.6081949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1578,11 +1578,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
-            timestampString = "589816090.100458"
+            timestampString = "591787953.60949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1590,15 +1590,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
-            timestampString = "589816090.1005239"
+            timestampString = "591787953.609746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "buttonSaveBet_clicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1610,12 +1610,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/Presenter/BetsPresenter.swift"
-            timestampString = "589816090.100578"
+            timestampString = "590000024.43229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "saveBet(raceName:riderName:season:typeBet:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "init()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1658,13 +1658,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/Presenter/BetsPresenter.swift"
-            timestampString = "589816090.100631"
+            timestampString = "590000024.4323421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "saveBet(raceName:riderName:season:typeBet:)"
-            landmarkType = "7">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "BetsPresenter"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1674,92 +1674,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Bets/Presenter/BetsPresenter.swift"
-            timestampString = "589816090.100682"
+            timestampString = "590000024.432387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "saveBet(raceName:riderName:season:typeBet:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Bets/DataManager/BetsDataManager.swift"
-            timestampString = "589816090.100733"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "saveBet(raceName:riderName:season:typeBet:success:failure:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Angliru.BetsDataManager.saveBet(raceName: Swift.String, riderName: Swift.String, season: Swift.String, typeBet: Swift.String, success: () -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Bets/DataManager/BetsDataManager.swift"
-                  timestampString = "589815452.383654"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "384">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Angliru.BetsDataManager.saveBet(raceName: Swift.String, riderName: Swift.String, season: Swift.String, typeBet: Swift.String, success: () -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Bets/DataManager/BetsDataManager.swift"
-                  timestampString = "589815452.385569"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Bets/DataManager/BetsDataManager.swift"
-            timestampString = "589816090.10079"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "saveBet(raceName:riderName:season:typeBet:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Bets/DataManager/BetsDataManager.swift"
-            timestampString = "589816090.100839"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "saveBet(raceName:riderName:season:typeBet:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1786,7 +1706,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Services/BetsService.swift"
-            timestampString = "589816090.100931"
+            timestampString = "590000024.4324729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -1802,7 +1722,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Services/BetsService.swift"
-            timestampString = "589816090.101441"
+            timestampString = "590000024.432519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -1818,12 +1738,236 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Services/BetsService.swift"
-            timestampString = "589816090.101917"
+            timestampString = "590000024.432561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "saveBet(raceName:riderName:season:typeBet:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
+            timestampString = "590000024.432606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getClassificationByType(raceName:season:type:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.ClassificationDataManager.getClassificationByType(raceName: Swift.String, season: Swift.String, type: Swift.String, success: (Swift.Array&lt;Angliru.Classification&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
+                  timestampString = "589887138.791247"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Angliru.Classification&gt;) -&gt; () in Angliru.ClassificationDataManager.getClassificationByType(raceName: Swift.String, season: Swift.String, type: Swift.String, success: (Swift.Array&lt;Angliru.Classification&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Classification/DataManager/ClassificationDataManager.swift"
+                  timestampString = "589887138.793063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Bets/ViewController/BetsTeamsViewController.swift"
+            timestampString = "589998055.674982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewTeamRidersByRace(team:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.BetsTeamsViewController.viewTeamRidersByRace(team: Swift.String) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Bets/ViewController/BetsTeamsViewController.swift"
+                  timestampString = "589998057.05598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.BetsTeamsViewController.viewTeamRidersByRace(team: Swift.String) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Bets/ViewController/BetsTeamsViewController.swift"
+                  timestampString = "589998057.0607311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
+            timestampString = "591787953.610249"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
+            timestampString = "591787953.610497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "presenterGetBetsOpen(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
+            timestampString = "591787953.610731"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "presenterDidReceiveTeamRidersByRace(result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Bets/ViewController/BetsRidersViewController.swift"
+            timestampString = "591787953.6109591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Teams/ViewController/TeamsViewController.swift"
+            timestampString = "591811750.643008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "presenterDidGetTeams(result:category:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Teams/ViewController/TeamsViewController.swift"
+            timestampString = "591811750.643465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "loadInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Teams/ViewController/TeamsViewController.swift"
+            timestampString = "591811750.643752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Teams/ViewController/TeamsViewController.swift"
+            timestampString = "591811849.4538"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

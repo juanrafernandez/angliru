@@ -13,7 +13,7 @@ class CalendarDataManager: NSObject {
     let raceService : RacesService!
     let raceStore : RacesStore!
     
-    var serverSynchronized = true
+    var serverSynchronized = false
     
     override init() {
         raceService = RacesService()
@@ -21,8 +21,20 @@ class CalendarDataManager: NSObject {
     }
     
     func getCalendarRaces(season: String, success successBlock: @escaping ((Array<Race>) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
-        if serverSynchronized == true {
+       /* if serverSynchronized == true {
             successBlock(self.raceStore.getRaces(season: season))
+        } else {
+            raceService.getCalendarInfo(season: season, success: { (result : Array<Race>) in
+                self.raceStore.saveRaces(races: result, season: season)
+                successBlock(result)
+            }) { (err : Error) in
+                failureBlock(err)
+            }
+        } */
+        
+        let results = self.raceStore.getRaces(season: season)
+        if results.count > 0 {
+            successBlock(results)
         } else {
             raceService.getCalendarInfo(season: season, success: { (result : Array<Race>) in
                 self.raceStore.saveRaces(races: result, season: season)
