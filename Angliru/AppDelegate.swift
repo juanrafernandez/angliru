@@ -19,17 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
+        registerForRemoteNotifications(application: application)
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        // Load initial screen
         window = UIWindow()
         window?.makeKeyAndVisible()
         let navigationController = UINavigationController(rootViewController: AccessViewController())
         navigationController.navigationBar.isHidden = true
         window?.rootViewController = navigationController
-        
-        registerForRemoteNotifications(application: application)
         
         return true
     }
@@ -86,6 +90,8 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
@@ -103,6 +109,8 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
         
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {

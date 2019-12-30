@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController, GIDSignInUIDelegate {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var imageViewMail: UIImageView!
     @IBOutlet weak var textFieldMail: UITextField!
@@ -31,14 +31,21 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        //GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func initializeInterface() {
         navigationController?.navigationBar.isHidden = true
-        buttonLogin.layer.cornerRadius = 5
-        buttonGoogleLogin.layer.cornerRadius = 5
+        buttonLogin.layer.cornerRadius = 10
+        buttonGoogleLogin.layer.cornerRadius = 10
+        buttonGoogleLogin.layer.borderColor = UIColor.white.cgColor
+        buttonGoogleLogin.layer.borderWidth = 1.0
+        buttonSignIn.layer.cornerRadius = 10
+        buttonSignIn.layer.borderColor = UIColor.white.cgColor
+        buttonSignIn.layer.borderWidth = 1.0
+        
         textFieldMail.attributedPlaceholder = NSAttributedString(string: "mail",
                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: "contraseña",
@@ -60,8 +67,21 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func buttonSignIn_clicked(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let signinViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-        navigationController?.pushViewController(signinViewController, animated: true)
+        
+        var currentViewController : SignInViewController? = nil
+        for viewController in navigationController!.children {
+            if(viewController.isKind(of: SignInViewController.self)){
+                currentViewController = viewController as? SignInViewController
+                break
+            }
+        }
+        
+        if currentViewController == nil {
+            currentViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
+            navigationController?.pushViewController(currentViewController!, animated: true)
+        } else {
+            navigationController?.popToViewController(currentViewController!, animated: true)
+        }
     }
     
     // MARK: - API

@@ -20,8 +20,6 @@ target 'Angliru' do
   pod 'Alamofire'
   pod 'SideMenu'
   pod 'BTNavigationDropdownMenu'
-  pod 'FoldingCell'
-  pod 'RAMAnimatedTabBarController'
   pod 'Alamofire'
-  
+  pod 'BubbleTabBar'
 end

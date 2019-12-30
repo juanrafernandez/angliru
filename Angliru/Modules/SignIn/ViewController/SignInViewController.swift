@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class SignInViewController: UIViewController, GIDSignInUIDelegate {
+class SignInViewController: UIViewController {
 
     @IBOutlet weak var imageViewUser: UIImageView!
     @IBOutlet weak var textFieldUser: UITextField!
@@ -29,7 +29,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeInterface()
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        //GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func initializeInterface() {
@@ -59,8 +60,19 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func buttonLogin_clicked(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        navigationController?.pushViewController(loginViewController, animated: true)
+        var currentViewController : LoginViewController? = nil
+        for viewController in navigationController!.children {
+            if(viewController.isKind(of: LoginViewController.self)){
+                currentViewController = viewController as? LoginViewController
+                break
+            }
+        }
+        if currentViewController == nil {
+            currentViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+            navigationController?.pushViewController(currentViewController!, animated: true)
+        } else {
+            navigationController?.popToViewController(currentViewController!, animated: true)
+        }
     }
     
     // MARK: - API

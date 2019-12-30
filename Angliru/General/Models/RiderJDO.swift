@@ -9,6 +9,7 @@
 import RealmSwift
 
 class RiderJDO : Object {
+    @objc dynamic var id = ""
     @objc dynamic var season = ""
     @objc dynamic var category = ""
     @objc dynamic var name = ""
@@ -27,6 +28,6 @@ class RiderJDO : Object {
     @objc dynamic var uci = ""
     
     override class func primaryKey() -> String? {
-        return "name"
+        return "id"
     }
 }
