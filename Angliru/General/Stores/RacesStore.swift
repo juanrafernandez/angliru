@@ -34,7 +34,21 @@ class RacesStore: BaseRealmStore {
             raceJDO.profileImage = race.profileImage.isEmpty ? raceJDO.profileImage : race.profileImage
         
             for stage in race.stages {
-                raceJDO.stages.append(stage)
+                let stageJDO = StageJDO()
+                stageJDO.altimetry = stage.altimetry
+                stageJDO.date = stage.date
+                stageJDO.day = stage.day
+                stageJDO.destiny = stage.destiny
+                stageJDO.distance = stage.distance
+                stageJDO.month = stage.month
+                stageJDO.name = stage.name
+                stageJDO.origin = stage.origin
+                stageJDO.position = stage.position
+                stageJDO.profileImage = stage.profileImage
+                stageJDO.type = stage.type
+                stageJDO.year = stage.year
+                //stageJDO.result = stage.result
+                raceJDO.stages.append(stageJDO)
             }
             for team in race.teams {
                 raceJDO.teams.append(team)
@@ -150,7 +164,22 @@ class RacesStore: BaseRealmStore {
             race.twitter = raceJDO.twitter
             race.altimetry = raceJDO.altimetry
             race.profileImage = raceJDO.profileImage
-            for stage in raceJDO.stages {
+            for stageJDO in raceJDO.stages {
+                var stage = Stage()
+                stage.altimetry = stageJDO.altimetry
+                stage.date = stageJDO.date
+                stage.day = stageJDO.day
+                stage.destiny = stageJDO.destiny
+                stage.distance = stageJDO.distance
+                stage.month = stageJDO.month
+                stage.name = stageJDO.name
+                stage.origin = stageJDO.origin
+                stage.position = stageJDO.position
+                stage.profileImage = stageJDO.profileImage
+                stage.type = stageJDO.type
+                stage.year = stageJDO.year
+                //stageJDO.result = stage.result
+                //raceJDO.stages.append(stageJDO)
                 race.stages.append(stage)
             }
             for team in raceJDO.teams {

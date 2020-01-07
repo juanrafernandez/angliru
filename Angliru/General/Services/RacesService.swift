@@ -39,12 +39,12 @@ class RacesService: NSObject {
                     raceCalendar.altimetry = document.data()["altimetry"] as? Double ?? 0.0
                     raceCalendar.profileImage = document.data()["profileImage"] as? String ?? ""
 
-                    self.getStages(raceName: raceCalendar.name, success: { (result: Array<String>) in
+                    self.getStages(raceName: document.documentID, success: { (result: Array<Stage>) in
                         raceCalendar.stages = result
                         //races.append(raceCalendar)
                         
                             //successBlock(races)
-                            self.getTeamsByRace(raceName: raceCalendar.name, season: season, success: { (result) in
+                            self.getTeamsByRace(raceName: document.documentID, season: season, success: { (result) in
                                 raceCalendar.teams = result
                                 races.append(raceCalendar)
                                 if races.count >= querySnapshot!.documents.count {
@@ -64,11 +64,11 @@ class RacesService: NSObject {
         }
     }
     
-    func getStages(raceName : String, success successBlock: @escaping ((Array<String>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+    func getStages(raceName : String, success successBlock: @escaping ((Array<Stage>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
         let db = Firestore.firestore()
-        var stages = Array<String>()
+        var stages = Array<Stage>()
         
-        let docRef = db.collection("races").document(raceName).collection(Utils.getCurrentYear ()).document("stages").collection("routes").order(by: "position")
+        let docRef = db.collection("races").document(raceName).collection("2019").document("stages").collection("routes").order(by: "position")
         
         
         docRef.getDocuments() { (querySnapshot, err) in
@@ -79,7 +79,54 @@ class RacesService: NSObject {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     
-                    let stage = document.documentID
+                   // let stage = document.documentID
+                    var stage = Stage()
+                    stage.name = document.data()["name"] as? String ?? ""
+                    if stage.name == "" {
+                        stage.name = document.documentID
+                    }
+                    stage.date = document.data()["date"] as? String ?? ""
+                    stage.month = document.data()["month"] as? String ?? ""
+                    stage.day = document.data()["day"] as? String ?? ""
+                    stage.year = document.data()["year"] as? String ?? ""
+                    stage.destiny = document.data()["destiny"] as? String ?? ""
+                    stage.type = document.data()["type"] as? String ?? ""
+                    stage.distance = document.data()["distance"] as? String ?? ""
+                    stage.origin = document.data()["origin"] as? String ?? ""
+                    stage.position = document.data()["position"] as? Int ?? -1
+                    
+                    if (document.data().keys.contains("profileImage")) {
+                        stage.profileImage = document.data()["profileImage"] as? String ?? ""
+                    }
+                    if (document.data().keys.contains("altimetry")) {
+                        stage.altimetry = document.data()["altimetry"] as? String ?? ""
+                    }
+                    //successBlock(stage)
+                    
+//                    var results = Array<Classification>()
+//                    let docRefs = db.collection("races").document(raceName).collection("2019").document("stages").collection("routes").document(document.documentID).collection("result").order(by: "position")
+//
+//                    docRefs.getDocuments() { (querySnapshot, err) in
+//                        if let err = err {
+//                            print("Error getting documents: \(err)")
+//                            failureBlock(err)
+//                        } else {
+//                            for document in querySnapshot!.documents {
+//                                print("\(document.documentID) => \(document.data())")
+//                                var result = Classification()
+//                                result.country = document.data()["country"] as? String ?? ""
+//                                result.name = document.data()["name"] as? String ?? ""
+//                                result.points = document.data()["points"] as? String ?? ""
+//                                result.team = document.data()["team"] as? String ?? ""
+//                                result.teamAbreviation = document.data()["nameAbreviation"] as? String ?? ""
+//                                result.time = document.data()["time"] as? String ?? ""
+//                                results.append(result)
+//                            }
+//                            stage.result = results
+//                            successBlock(stage)
+//                        }
+//                    }
+                
                     stages.append(stage)
                 }
                 successBlock(stages)

@@ -20,7 +20,7 @@ struct Race {
     var twitter = ""
     var altimetry = 0.0
     var profileImage = ""
-    var stages = Array<String>()
+    var stages = Array<Stage>()
     var teams = Array<String>()
     var classificationTypes = Array<String>()
     var racesResults = Array<[Classification]>()

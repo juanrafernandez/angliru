@@ -21,7 +21,7 @@ class RaceJDO: Object {
     @objc dynamic var twitter = ""
     @objc dynamic var altimetry = 0.0
     @objc dynamic var profileImage = ""
-    var stages = List<String>()
+    var stages = List<StageJDO>()
     var teams = List<String>()
     //var classificationTypes = List<String>()
     var racesResults = List<ResultsJDO>()

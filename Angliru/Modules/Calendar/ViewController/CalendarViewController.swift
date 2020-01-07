@@ -23,6 +23,14 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
     }
     
+    func viewCalendarPopUp(race: Race) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let calendarPopUp = storyboard.instantiateViewController(withIdentifier: "CalendarPopUpViewController") as! CalendarPopUpViewController
+        calendarPopUp.race = race
+        self.present(calendarPopUp, animated: true, completion: nil)
+        SVProgressHUD.dismiss()
+    }
+    
     // MARK: Helpers
     private func setup() {
         presenter.output = self
@@ -54,39 +62,8 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarInfoCell", for: indexPath) as! CalendarInfoCell
         let race = races[indexPath.row]
-        cell.labelRaceName.text = race.name
-        
-        var position = race.dateStart.firstIndex(of: ".") ?? race.dateStart.endIndex
-        let dateNumber = String(race.dateStart[..<position])
-        position = race.dateStart.index(position, offsetBy: 1)
-        let dateMonth = String(race.dateStart[position...])
-        
-        cell.labelDay.text = dateNumber
-        cell.labelMonth.text = MONTHS_SHORT[Int(dateMonth)!-1]
-        var dateNumberEnd = ""
-        var dateMonthEnd = ""
-        if race.dateEnd != "" {
-            var positionEnd = race.dateEnd.firstIndex(of: ".") ?? race.dateEnd.endIndex
-            dateNumberEnd = String(race.dateEnd[..<positionEnd])
-            positionEnd = race.dateEnd.index(positionEnd, offsetBy: 1)
-            dateMonthEnd = String(race.dateEnd[positionEnd...])
-            cell.labelRaceDate.text = "\(dateNumber) \(MONTHS_SHORT[Int(dateMonth)!]) - \(dateNumberEnd) \(MONTHS_SHORT[Int(dateMonthEnd)!])"
-        } else {
-            cell.labelRaceDate.text = "\(dateNumber) \(MONTHS_SHORT[Int(dateMonth)!])"
-        }
-        if race.distance != 0 {
-            cell.labelRaceDistance.isHidden = false
-            cell.labelRaceDistance.text = "\(String(race.distance)) km"
-        } else {
-            cell.labelRaceDistance.isHidden = true
-        }
-        
-        if race.stages.count > 0 {
-            cell.labelRaceType.text = "\(race.stages.count) Etapas"
-        } else {
-            cell.labelRaceType.text = "CLÁSICA"
-        }
-        
+        cell.setCellData(race: race)
+                
         return cell
     }
     
@@ -95,8 +72,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        SVProgressHUD.show()
         let race = races[indexPath.row]
+        viewCalendarPopUp(race: race)
     }
     
     //MARK: CalendarPresenterOutput methods

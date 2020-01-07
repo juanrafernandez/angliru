@@ -9,12 +9,16 @@
 import UIKit
 import SideMenu
 
-class MenuViewController: UIViewController {
+class MenuViewController: BaseViewController {
 
+    @IBOutlet weak var buttonCloseSesion: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
     
+    @IBAction func buttonCloseSession_clicked(_ sender: Any) {
+        self.signOut()
+    }
 }

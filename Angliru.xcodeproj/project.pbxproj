@@ -23,7 +23,6 @@
 		35467DCB22F9BD7F00E3BA18 /* TeamsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DCA22F9BD7F00E3BA18 /* TeamsStore.swift */; };
 		35467DCD22F9BE5F00E3BA18 /* BaseRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35467DCC22F9BE5F00E3BA18 /* BaseRealmStore.swift */; };
 		3546954622F1A91E0003DCDC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546954522F1A91E0003DCDC /* CalendarViewController.swift */; };
-		3546954922F1AA020003DCDC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546954822F1AA020003DCDC /* CalendarCell.swift */; };
 		3546A55D22F457CB008284B3 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A55C22F457CB008284B3 /* StageViewController.swift */; };
 		3546A55F22F4581E008284B3 /* StagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A55E22F4581E008284B3 /* StagePresenter.swift */; };
 		3546A56122F4585D008284B3 /* StageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546A56022F4585D008284B3 /* StageDataManager.swift */; };
@@ -68,6 +67,7 @@
 		3559C55D232284AF00C32A9A /* BetsTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559C55C232284AF00C32A9A /* BetsTeamsViewController.swift */; };
 		3593C4B723B978BC00210CFF /* CalendarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593C4B623B978BC00210CFF /* CalendarInfoCell.swift */; };
 		359D7474238ED113004EA360 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359D7473238ED113004EA360 /* Launch Screen.xib */; };
+		359E9A8A23BA793B00AE7E45 /* CalendarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359E9A8923BA793B00AE7E45 /* CalendarPopUpViewController.swift */; };
 		35D84AAA239868F300BDB631 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D84AA9239868F300BDB631 /* BaseViewController.swift */; };
 		95B9CFA7E5D68720D706CDF9 /* Pods_Angliru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E030E495395C7A035D0B0E5 /* Pods_Angliru.framework */; };
 /* End PBXBuildFile section */
@@ -89,7 +89,6 @@
 		35467DCA22F9BD7F00E3BA18 /* TeamsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStore.swift; sourceTree = "<group>"; };
 		35467DCC22F9BE5F00E3BA18 /* BaseRealmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmStore.swift; sourceTree = "<group>"; };
 		3546954522F1A91E0003DCDC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		3546954822F1AA020003DCDC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		3546A55C22F457CB008284B3 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
 		3546A55E22F4581E008284B3 /* StagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagePresenter.swift; sourceTree = "<group>"; };
 		3546A56022F4585D008284B3 /* StageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDataManager.swift; sourceTree = "<group>"; };
@@ -137,6 +136,7 @@
 		3559C55C232284AF00C32A9A /* BetsTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetsTeamsViewController.swift; sourceTree = "<group>"; };
 		3593C4B623B978BC00210CFF /* CalendarInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInfoCell.swift; sourceTree = "<group>"; };
 		359D7473238ED113004EA360 /* Launch Screen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		359E9A8923BA793B00AE7E45 /* CalendarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPopUpViewController.swift; sourceTree = "<group>"; };
 		35D84AA9239868F300BDB631 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E030E495395C7A035D0B0E5 /* Pods_Angliru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angliru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC53CF76B0B3DCCE977B508 /* Pods-Angliru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angliru.release.xcconfig"; path = "Target Support Files/Pods-Angliru/Pods-Angliru.release.xcconfig"; sourceTree = "<group>"; };
@@ -297,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				3546954522F1A91E0003DCDC /* CalendarViewController.swift */,
+				359E9A8923BA793B00AE7E45 /* CalendarPopUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,7 +323,6 @@
 			children = (
 				354EE8DF22F3A74100A9534D /* ClassificationCell.swift */,
 				354EE8E022F3A74200A9534D /* ClassificationCell.xib */,
-				3546954822F1AA020003DCDC /* CalendarCell.swift */,
 				3552115122F34416001D8FAA /* StageCell.swift */,
 				3559C55823227C5400C32A9A /* BetRiderCell.xib */,
 				3559C55A232283C600C32A9A /* BetRiderCell.swift */,
@@ -522,12 +522,12 @@
 		3553C48122E9C96700214E10 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				35467DC922F9BD5400E3BA18 /* Stores */,
-				3541D8E522F24DAE00DF1EAF /* Utils */,
+				3546954722F1A9ED0003DCDC /* Cells */,
+				3541D8D822F2457300DF1EAF /* Constants */,
 				3541D8DC22F245F300DF1EAF /* Models */,
 				3541D8D922F2458600DF1EAF /* Services */,
-				3541D8D822F2457300DF1EAF /* Constants */,
-				3546954722F1A9ED0003DCDC /* Cells */,
+				35467DC922F9BD5400E3BA18 /* Stores */,
+				3541D8E522F24DAE00DF1EAF /* Utils */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -535,18 +535,18 @@
 		3553C48222E9C98500214E10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3553C48922E9CA5900214E10 /* Access */,
 				35D84AA7239868C200BDB631 /* Base */,
 				3559C55623227AF800C32A9A /* Bets */,
-				354BE34222F8DE450078EF9E /* Riders */,
-				3554C6AC22F87EA30004D288 /* Teams */,
-				3546A55822F456D9008284B3 /* Stage */,
-				354EE8D522F39B2400A9534D /* Classification */,
 				3546954122F1A8EF0003DCDC /* Calendar */,
-				354EF4B222EC79A400E16FD2 /* Menu */,
+				354EE8D522F39B2400A9534D /* Classification */,
 				353F899F22EBBDA0009860EB /* Home */,
-				353463DC22EA607E00850C61 /* SignIn */,
-				3553C48922E9CA5900214E10 /* Access */,
 				3553C48322E9C99A00214E10 /* Login */,
+				354EF4B222EC79A400E16FD2 /* Menu */,
+				354BE34222F8DE450078EF9E /* Riders */,
+				353463DC22EA607E00850C61 /* SignIn */,
+				3546A55822F456D9008284B3 /* Stage */,
+				3554C6AC22F87EA30004D288 /* Teams */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -848,7 +848,6 @@
 				354BE34922F8E3240078EF9E /* RidersPresenter.swift in Sources */,
 				3553C48C22E9CAA400214E10 /* AccessViewController.swift in Sources */,
 				3546A55D22F457CB008284B3 /* StageViewController.swift in Sources */,
-				3546954922F1AA020003DCDC /* CalendarCell.swift in Sources */,
 				3541D8DB22F245B200DF1EAF /* Constants.swift in Sources */,
 				3551947E2327B23D00084E96 /* BetsDataManager.swift in Sources */,
 				354EF4B722EC79CF00E16FD2 /* MenuViewController.swift in Sources */,
@@ -868,6 +867,7 @@
 				3551947B2327B21A00084E96 /* BetsPresenter.swift in Sources */,
 				35467DC022F997AE00E3BA18 /* RaceJDO.swift in Sources */,
 				3554C6B122F87ED80004D288 /* TeamsViewController.swift in Sources */,
+				359E9A8A23BA793B00AE7E45 /* CalendarPopUpViewController.swift in Sources */,
 				3554C6BD22F88A360004D288 /* Rider.swift in Sources */,
 				353F89A422EBBE03009860EB /* HomeViewController.swift in Sources */,
 				35467DCD22F9BE5F00E3BA18 /* BaseRealmStore.swift in Sources */,

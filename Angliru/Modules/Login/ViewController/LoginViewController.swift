@@ -10,17 +10,21 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var imageViewMail: UIImageView!
+    @IBOutlet weak var viewMailSeparator: UIView!
+    @IBOutlet weak var viewPasswordSeparator: UIView!
     @IBOutlet weak var textFieldMail: UITextField!
     @IBOutlet weak var viewMailHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewPassword: UIImageView!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var viewPasswordHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonLogin: UIButton!
     @IBOutlet weak var buttonGoogleLogin: UIButton!
     @IBOutlet weak var buttonSignIn: UIButton!
+    @IBOutlet weak var imageLogo: UIImageView!
+    @IBOutlet weak var imageLogoHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageLogoWidthConstraint: NSLayoutConstraint!
+    var showing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +49,54 @@ class LoginViewController: UIViewController {
         buttonSignIn.layer.cornerRadius = 10
         buttonSignIn.layer.borderColor = UIColor.white.cgColor
         buttonSignIn.layer.borderWidth = 1.0
+        setUpTextFields()
+    }
+    
+    func setUpTextFields() {
+        textFieldMail.delegate = self
+        textFieldPassword.delegate = self
+
+        textFieldMail.clearButtonMode = .always
+        textFieldMail.clearButtonMode = .whileEditing
+        textFieldPassword.clearButtonMode = .always
+        textFieldPassword.clearButtonMode = .whileEditing
+        textFieldMail.tintColor = .white
+        textFieldPassword.tintColor = .white
         
+        let clearButton = UIButton(type: .custom)
+        clearButton.setImage(UIImage(named:"ic_clear_text"), for: .normal)
+        clearButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        clearButton.contentMode = .scaleAspectFit
+        clearButton.addTarget(self, action: #selector(clear(sender:)), for: .touchUpInside)
+        textFieldMail.rightView = clearButton
+        textFieldMail.rightViewMode = .whileEditing
+        textFieldPassword.rightView = clearButton
+        textFieldPassword.rightViewMode = .whileEditing
+                
         textFieldMail.attributedPlaceholder = NSAttributedString(string: "mail",
-                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         textFieldPassword.attributedPlaceholder = NSAttributedString(string: "contraseña",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    }
+    
+    @objc func clear(sender : AnyObject) {
+        let textField = sender.superview as! UITextField
+        textField.text = ""
+    }
+    
+    func showKeyboard(show: Bool) {
+        UIView.animate(withDuration: 0.2) {
+            var t = self.imageLogo.transform
+            if show && !self.showing {
+                t = t.scaledBy(x: 0.5, y: 0.5)
+                self.showing = true
+            } else if !show && self.showing{
+                t = t.scaledBy(x: 2, y: 2)
+                self.showing = false
+            }
+            //t = t.rotated(by: CGFloat(M_PI_4))
+            self.imageLogo.transform = t;
+        }
     }
     
     // MARK: interface events
@@ -81,6 +128,55 @@ class LoginViewController: UIViewController {
             navigationController?.pushViewController(currentViewController!, animated: true)
         } else {
             navigationController?.popToViewController(currentViewController!, animated: true)
+        }
+    }
+    
+    // MARK: - TextFieldDelegate methods
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //imageLogoHeightConstraint.constant = 35
+        //imageLogoWidthConstraint.constant = 80
+        showKeyboard(show: true)
+        if textFieldMail == textField{
+            viewMailHeightConstraint.constant = 2
+            viewMailSeparator.backgroundColor = COLOR_ORANGE
+        } else {
+            viewPasswordHeightConstraint.constant = 2
+            viewPasswordSeparator.backgroundColor = COLOR_ORANGE
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //imageLogoHeightConstraint.constant = 58
+        //imageLogoWidthConstraint.constant = 177
+        
+        if textFieldMail == textField{
+            viewMailHeightConstraint.constant = 1
+            viewMailSeparator.backgroundColor = UIColor.white
+        } else {
+            viewPasswordHeightConstraint.constant = 1
+            viewPasswordSeparator.backgroundColor = UIColor.white
+        }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textFieldMail == textField{
+            textFieldPassword.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            showKeyboard(show: false)
+        }
+        
+        if textFieldPassword.text != "" && textFieldMail.text != "" {
+            buttonLogin.backgroundColor = UIColor.white
+        }
+        
+        return true
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textFieldPassword.text != "" && textFieldMail.text != "" {
+            buttonLogin.backgroundColor = UIColor.white
+        } else {
+            buttonLogin.backgroundColor = COLOR_GRAY_ALPHA
         }
     }
     
@@ -171,19 +267,6 @@ extension LoginViewController: GIDSignInDelegate {
                         self.dismiss(animated: true, completion: nil)
                     }
             })
-            
-           /* Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
-                guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
-                guard let controller = navController.viewControllers[0] as? AccessViewController else { return }
-               // controller.configureViewComponents()
-                
-                self.postToken(Token: token)
-                
-                // forgot to add this in video
-                controller.loadUserData()
-                
-                self.dismiss(animated: true, completion: nil)
-            }) */
         }
     }
 }

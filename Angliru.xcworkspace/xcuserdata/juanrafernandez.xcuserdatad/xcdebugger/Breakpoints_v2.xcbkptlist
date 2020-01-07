@@ -107,23 +107,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0889816D-41BA-4DF0-9EAD-6974DC82E234"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
-            timestampString = "589718723.9794461"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "157E3452-24D6-4B92-BCE2-4A40CD9263A0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -132,8 +115,8 @@
             timestampString = "589718723.979513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115">
+            startingLineNumber = "93"
+            endingLineNumber = "93">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -232,23 +215,8 @@
             timestampString = "589718723.979829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E05EEBF-BDFC-458E-927A-9A85E1F523D8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
-            timestampString = "589718723.9798729"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115">
+            startingLineNumber = "93"
+            endingLineNumber = "93">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -578,7 +546,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8D974B86-36A7-4BA3-A09E-87FAD27155E0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/General/Stores/RacesStore.swift"
@@ -587,40 +555,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
+            landmarkName = "saveRaces(races:season:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8D974B86-36A7-4BA3-A09E-87FAD27155E0 - 7fd5f7a99822a430"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Angliru.RacesStore.saveRaceClassification(raceName: Swift.String, type: Swift.String, season: Swift.String, results: Swift.Array&lt;Angliru.Classification&gt;) -&gt; ()"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "8D974B86-36A7-4BA3-A09E-87FAD27155E0 - 9f0f7faf84af03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Angliru.RaceJDO) -&gt; Swift.Bool in Angliru.RacesStore.saveRaceClassification(raceName: Swift.String, type: Swift.String, season: Swift.String, results: Swift.Array&lt;Angliru.Classification&gt;) -&gt; ()"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -636,7 +572,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
+            landmarkName = "saveRaces(races:season:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -823,40 +759,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "getRaceClassification(raceName:season:type:)"
+            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "89AE83AE-C767-4DC4-B374-7F8635E6375D - 4b7b4c415d91b5d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Angliru.RacesStore.getRaceClassification(raceName: Swift.String, season: Swift.String, type: Swift.String) -&gt; Swift.Array&lt;Angliru.Classification&gt;"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "336">
-               </Location>
-               <Location
-                  uuid = "89AE83AE-C767-4DC4-B374-7F8635E6375D - c84272a3c227bccb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Angliru.RaceJDO) -&gt; Swift.Bool in Angliru.RacesStore.getRaceClassification(raceName: Swift.String, season: Swift.String, type: Swift.String) -&gt; Swift.Array&lt;Angliru.Classification&gt;"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -889,7 +793,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
+            landmarkName = "saveRaces(races:season:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -940,7 +844,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "getRaceClassification(raceName:season:type:)"
+            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -957,7 +861,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "getRaceClassification(raceName:season:type:)"
+            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1025,7 +929,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "getRaceClassification(raceName:season:type:)"
+            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1042,7 +946,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "getRaceClassification(raceName:season:type:)"
+            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1059,7 +963,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
+            landmarkName = "saveRaces(races:season:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1074,9 +978,9 @@
             timestampString = "589718723.98088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "refreshHandler()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1091,8 +995,8 @@
             timestampString = "589718723.980926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115">
+            startingLineNumber = "93"
+            endingLineNumber = "93">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1106,8 +1010,8 @@
             timestampString = "589805769.3181469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "sign(_:didSignInFor:withError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1116,16 +1020,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D9ECF6FB-74F5-4678-831A-24A81DC2D02C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             timestampString = "589805769.318674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "sign(_:didSignInFor:withError:)"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "logUserIn(withEmail:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1140,9 +1044,9 @@
             timestampString = "589805769.319034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "logUserIn(withEmail:password:)"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1150,16 +1054,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7823B693-2783-4682-9E72-5469DF311816"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             timestampString = "589805769.31937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "sign(_:didSignInFor:withError:)"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "postToken(token:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1174,9 +1078,9 @@
             timestampString = "589805769.319695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "postToken(token:)"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "logUserIn(withEmail:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1193,8 +1097,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "application(_:didReceiveRemoteNotification:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1261,7 +1165,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "saveRaceClassification(raceName:type:season:results:)"
+            landmarkName = "saveRaces(races:season:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1473,17 +1377,49 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F311F535-1D8B-4965-A1D6-64C11AF14BC6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             timestampString = "589805769.32099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "sign(_:didSignInFor:withError:)"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "postToken(token:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F311F535-1D8B-4965-A1D6-64C11AF14BC6 - 2507e0a5734db05c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.LoginViewController.postToken(token: Swift.String) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Login/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "F311F535-1D8B-4965-A1D6-64C11AF14BC6 - b511287321ab94fe"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.LoginViewController.postToken(token: Swift.String) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/Modules/Login/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1778,38 +1714,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F85D328A-0231-4B1F-ADB0-08E3E6DBD531"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "setup()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C79BE1CE-EBA6-43B6-9CA3-644E57372BD3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "CalendarViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7B03F22D-4867-4A58-8E17-F9CB56823D71"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1833,9 +1737,9 @@
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "buttonSignIn_clicked(_:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "buttonGoogleLogin_clicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1843,15 +1747,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4E73CE54-D964-4B4A-98D8-8472BE10EA84"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "logUserIn(withEmail:password:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "buttonSignIn_clicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1859,15 +1763,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E2EF3003-D357-429A-8622-40ED853D5325"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "logUserIn(withEmail:password:)"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1883,15 +1787,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1760"
             endingLineNumber = "1760"
-            landmarkName = "-signInFlowAuthDataResultCallbackByDecoratingCallback:"
-            landmarkType = "7">
+            landmarkName = "FIRAuth"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "58D6F8E8-3172-497C-A6BE-6A9DD7523E50"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuth.m"
@@ -1904,7 +1808,7 @@
             <Locations>
                <Location
                   uuid = "58D6F8E8-3172-497C-A6BE-6A9DD7523E50 - d2b00358006f2c0c"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__64-[FIRAuth signInFlowAuthDataResultCallbackByDecoratingCallback:]_block_invoke"
@@ -1919,7 +1823,7 @@
                </Location>
                <Location
                   uuid = "58D6F8E8-3172-497C-A6BE-6A9DD7523E50 - a09ff1c046101699"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__64-[FIRAuth signInFlowAuthDataResultCallbackByDecoratingCallback:]_block_invoke_4"
@@ -1939,15 +1843,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EA39918C-862B-45C0-B259-B4C2BA55901C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "logUserIn(withEmail:password:)"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1955,15 +1859,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A100BF40-5484-4688-BB6E-F2CFC4144131"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "logUserIn(withEmail:password:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2044,22 +1948,6 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "getRiders(season:category:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B757F315-8FE3-45BB-A45D-B197845B4C0D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2279,40 +2167,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "getRaceTeamsRiders(season:raceName:teamName:)"
+            landmarkName = "getRaceClassification(raceName:season:type:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "11C39B08-E92E-4E04-876D-98F814328C78 - 996076d9c0bbc794"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Angliru.RacesStore.getRaceTeamsRiders(season: Swift.String, raceName: Swift.String, teamName: Swift.String) -&gt; Swift.Array&lt;Angliru.Classification&gt;"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "372">
-               </Location>
-               <Location
-                  uuid = "11C39B08-E92E-4E04-876D-98F814328C78 - 689755f14d724b41"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Angliru.RaceJDO) -&gt; Swift.Bool in Angliru.RacesStore.getRaceTeamsRiders(season: Swift.String, raceName: Swift.String, teamName: Swift.String) -&gt; Swift.Array&lt;Angliru.Classification&gt;"
-                  moduleName = "Angliru"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Stores/RacesStore.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2327,7 +2183,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
             endingLineNumber = "139"
-            landmarkName = "getRaces(season:)"
+            landmarkName = "getRaceTeamsRiders(season:raceName:teamName:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2472,6 +2328,675 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "primaryKey()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3D20C2F-62AE-4FFC-8C9E-965600A4DF72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewCalendarPopUp(race:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40E61862-1031-4E21-8AE3-D09202099063"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE580BA4-4BE8-4729-81B6-2CF3FE31BC96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Cells/CalendarInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setCellData(race:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90CEA75C-E969-4AE5-9ABC-32B2CB873671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Cells/CalendarInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "setCellData(race:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF6E6D84-AD6B-4E8E-A2CF-B967495F5088"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Cells/CalendarInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "getRaceStatus(raceDayStart:raceMonthStart:raceDayEnd:raceMonthEnd:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB8A07F6-FCB2-412A-9B23-F658F4141D0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Cells/CalendarInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setCellData(race:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91E45C39-8D97-45FD-8FBF-602DFB368F93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Cells/CalendarInfoCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setCellData(race:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91E45C39-8D97-45FD-8FBF-602DFB368F93 - 43819c76411ea249"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.CalendarInfoCell.setCellData(race: Angliru.Race) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Cells/CalendarInfoCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "6296">
+               </Location>
+               <Location
+                  uuid = "91E45C39-8D97-45FD-8FBF-602DFB368F93 - 43819c76411ea249"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.CalendarInfoCell.setCellData(race: Angliru.Race) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Cells/CalendarInfoCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "6608">
+               </Location>
+               <Location
+                  uuid = "91E45C39-8D97-45FD-8FBF-602DFB368F93 - 43819c76411ea249"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.CalendarInfoCell.setCellData(race: Angliru.Race) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Cells/CalendarInfoCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "6920">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87E99FFB-67F1-4263-BB75-A9555B2509B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "dismissOnTapOutside()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "112E7EBD-251B-4DC1-9EEB-D37534257DC7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B63FBD8-04C2-4E57-916D-DE9E53DA94C1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14A96959-3669-4B89-B629-345E3BB6313F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getCalendarInfo(season:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14A96959-3669-4B89-B629-345E3BB6313F - b57aa13c1a722c5e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.RacesService.getCalendarInfo(season: Swift.String, success: (Swift.Array&lt;Angliru.Race&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "7892">
+               </Location>
+               <Location
+                  uuid = "14A96959-3669-4B89-B629-345E3BB6313F - 2b46c1afae83b6ae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.String&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.RacesService.getCalendarInfo(season: Swift.String, success: (Swift.Array&lt;Angliru.Race&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66BFA177-6C2A-4CB9-8E48-0BF81BE2DDC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getCalendarInfo(season:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3569E4DF-CBE7-4097-BAB1-4E6C69EF885F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getCalendarInfo(season:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1474BB7-ADFE-4630-BB08-93F533FA46E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getCalendarInfo(season:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F1474BB7-ADFE-4630-BB08-93F533FA46E1 - 2b46c1afae83b6ae"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.String&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.RacesService.getCalendarInfo(season: Swift.String, success: (Swift.Array&lt;Angliru.Race&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "F1474BB7-ADFE-4630-BB08-93F533FA46E1 - 37be4a3dd7126a59"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.String&gt;) -&gt; () in closure #1 (Swift.Array&lt;Swift.String&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.RacesService.getCalendarInfo(season: Swift.String, success: (Swift.Array&lt;Angliru.Race&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA7E43B3-26B0-498B-940A-EE0DD7E4D6AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getCalendarInfo(season:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A78D1D9-8725-4980-84B4-3CEC20AE8816"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getStages(raceName:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3A78D1D9-8725-4980-84B4-3CEC20AE8816 - db84116e70619783"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Angliru.RacesService.getStages(raceName: Swift.String, success: (Swift.Array&lt;Swift.String&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "3A78D1D9-8725-4980-84B4-3CEC20AE8816 - 4363305ab15f6d51"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Angliru.RacesService.getStages(raceName: Swift.String, success: (Swift.Array&lt;Swift.String&gt;) -&gt; (), failure: (Swift.Error) -&gt; ()) -&gt; ()"
+                  moduleName = "Angliru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanrafernandez/Curso%20Swift%205/Tests/Angliru/Angliru/General/Services/RacesService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5BC9596-5DEF-419C-848B-6EF71C2ACAF0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getStages(raceName:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9598630E-EB77-4820-980E-8B929578F733"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/General/Services/RacesService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getStages(raceName:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BEF212C-6045-4FDF-ACFA-D11294DE9DF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "fillRaceData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "019D07B7-D955-47DE-AC5C-4BAF282A7A30"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "initializeInterfaz()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92D45EA3-37C6-413F-BD27-017F9097EB92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A09DDBA8-3F5C-4F66-90C0-167B76525591"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E160750-4C6C-4AFF-BC90-DC8AE61E617B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Calendar/ViewController/CalendarPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "fillRaceData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5974755D-1586-4D24-B685-6071EFF205F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "textFieldShouldReturn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07C660A3-0065-4C74-AE5F-906E1FC64EC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08B3C040-1C05-4DB0-9081-9278E540C0BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "textFieldDidChangeSelection(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC18C392-C9FB-4EB9-9DF0-76426F307C6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "clear(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C83A177C-35CC-45AE-B37F-1F0B31816F47"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3DEC258-F39E-49BD-AC6C-6E8037456775"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "showKeyboard(show:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "002EDC18-6787-4DA8-8ADC-DFF5F0FA39FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "showKeyboard(show:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70B47208-34BE-4945-A720-CD1641FC9167"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Login/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "showKeyboard(show:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E68138E0-A658-4A00-8DAF-0163F2CB2F49"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Access/AccessViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "signOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB317054-251F-4649-90CD-7CE0266413D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Angliru/Modules/Access/AccessViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "signOut()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

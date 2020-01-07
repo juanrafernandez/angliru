@@ -32,16 +32,16 @@ class CalendarDataManager: NSObject {
             }
         } */
         
-        let results = self.raceStore.getRaces(season: season)
-        if results.count > 0 {
-            successBlock(results)
-        } else {
+//        let results = self.raceStore.getRaces(season: season)
+//        if results.count > 0 {
+//            successBlock(results)
+//        } else {
             raceService.getCalendarInfo(season: season, success: { (result : Array<Race>) in
                 self.raceStore.saveRaces(races: result, season: season)
                 successBlock(result)
             }) { (err : Error) in
                 failureBlock(err)
             }
-        }
+        //}
     }
 }

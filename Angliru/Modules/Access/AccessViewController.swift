@@ -51,7 +51,8 @@ class AccessViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let tabBarController = storyboard.instantiateViewController(withIdentifier: "BubbleTabBarController")
-                    self.navigationController?.pushViewController(tabBarController, animated: true)
+                    //self.navigationController?.pushViewController(tabBarController, animated: true)
+                    self.navigationController?.setViewControllers([tabBarController], animated: true)
                 })
             } else {
                 print("User does not exist")
@@ -64,8 +65,7 @@ class AccessViewController: UIViewController {
             try Auth.auth().signOut()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            navigationController?.pushViewController(loginViewController, animated: true)
-            self.present(loginViewController, animated: true, completion: nil)
+            navigationController?.setViewControllers([loginViewController], animated: true)
         } catch let error {
             print("Failed to sign out with error..", error)
         }
