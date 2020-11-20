@@ -18,11 +18,16 @@ struct Race {
     var distance = 0.0
     var web = ""
     var twitter = ""
+    var facebook = ""
     var altimetry = 0.0
     var profileImage = ""
+    var destiny = ""
+    var origin = ""
+    var raceType = ""
+    var numTeams = ""
+    var riders = Array<Rider>()
     var stages = Array<Stage>()
-    var teams = Array<String>()
+    //var teams = Array<String>()
     var classificationTypes = Array<String>()
     var racesResults = Array<[Classification]>()
-    
 }

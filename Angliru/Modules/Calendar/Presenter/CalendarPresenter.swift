@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 protocol CalendarPresenterInput {
-    func getCalendarRaces(season: String)
+    func getCalendarRaces(season: String, cache: Bool)
+    func checkCalendarRacesUpdates(season:String)
+    
 }
 
 protocol CalendarPresenterOutput {
     func presenterDidReceiveCalendarRaces(calendarRaces: Array<Race>)
     func presenterDidReceiveCalendarRacesError(error:Error)
+    func presenterDidCheckCalendarRacesUpdates(updated: String)
+    func presenterDidCheckCalendarRacesUpdatesError(error: Error)
 }
 
 class CalendarPresenter: NSObject, CalendarPresenterInput {
@@ -27,8 +31,18 @@ class CalendarPresenter: NSObject, CalendarPresenterInput {
         dataManager = CalendarDataManager()
     }
     
-    func getCalendarRaces(season: String) {
-        dataManager.getCalendarRaces(season: season, success: { (result) in
+    func checkCalendarRacesUpdates(season:String) {
+        dataManager.checkCalendarRacesUpdates(season: season, success: { (result) in
+            if (self.output != nil) {
+                self.output.presenterDidCheckCalendarRacesUpdates(updated: result)
+            }
+        }) { (error) in
+            self.output.presenterDidCheckCalendarRacesUpdatesError(error: error)
+        }
+    }
+    
+    func getCalendarRaces(season: String, cache: Bool) {
+        dataManager.getCalendarRaces(season: season, cache: cache, success: { (result) in
             if (self.output != nil) {
                 self.output.presenterDidReceiveCalendarRaces(calendarRaces: result)
             }
@@ -38,7 +52,5 @@ class CalendarPresenter: NSObject, CalendarPresenterInput {
             }
         }
     }
-    
-    
 }
 

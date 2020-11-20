@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ClassificationPresenterInput {
-    func getClassificationByType(raceName: String, season: String, type: String)
+    func getClassificationByType(raceName: String, season: String, type: String, cache: Bool)
     func getTeamRidersByRace(season: String, teamName: String, raceName: String)
 }
 
@@ -18,6 +18,8 @@ protocol ClassificationPresenterOutput {
     func presenterDidReceiveClassificationByTypeError(error:Error)
     func presenterDidReceiveTeamRidersByRace(result: Array<Classification>)
     func presenterDidReceiveTeamRidersByRaceError(error: Error)
+    func presenterDidCheckClassificationRacesUpdates(updated: String)
+    func presenterDidCheckClassificationRacesUpdatesError(error: Error)
 }
 
 class ClassificationPresenter: NSObject, ClassificationPresenterInput {
@@ -29,8 +31,18 @@ class ClassificationPresenter: NSObject, ClassificationPresenterInput {
         dataManager = ClassificationDataManager()
     }
     
-    func getClassificationByType(raceName: String, season: String, type: String) {
-        dataManager.getClassificationByType(raceName: raceName, season: season,type: type, success: { (result:Array<Classification>) in
+    func checkClassificationRacesUpdates(season:String) {
+        dataManager.checkClassificationRacesUpdates(season: season, success: { (result) in
+            if (self.output != nil) {
+                self.output.presenterDidCheckClassificationRacesUpdates(updated: result)
+            }
+        }) { (error) in
+            self.output.presenterDidCheckClassificationRacesUpdatesError(error: error)
+        }
+    }
+    
+    func getClassificationByType(raceName: String, season: String, type: String, cache: Bool) {
+        dataManager.getClassificationByType(raceName: raceName, season: season,type: type, cache: cache, success: { (result:Array<Classification>) in
             self.output.presenterDidReceiveClassificationByType(classification: result, type: type)
         }) { (err:Error) in
             self.output.presenterDidReceiveClassificationByTypeError(error: err)

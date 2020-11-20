@@ -13,35 +13,38 @@ class CalendarDataManager: NSObject {
     let raceService : RacesService!
     let raceStore : RacesStore!
     
-    var serverSynchronized = false
-    
     override init() {
         raceService = RacesService()
         raceStore = RacesStore()
     }
     
-    func getCalendarRaces(season: String, success successBlock: @escaping ((Array<Race>) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
-       /* if serverSynchronized == true {
-            successBlock(self.raceStore.getRaces(season: season))
-        } else {
-            raceService.getCalendarInfo(season: season, success: { (result : Array<Race>) in
-                self.raceStore.saveRaces(races: result, season: season)
-                successBlock(result)
-            }) { (err : Error) in
-                failureBlock(err)
-            }
-        } */
+    func checkCalendarRacesUpdates(season:String, success successBlock: @escaping ((String) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
         
-//        let results = self.raceStore.getRaces(season: season)
-//        if results.count > 0 {
-//            successBlock(results)
-//        } else {
+        raceService.checkCalendarRacesUpdates(season: season, success: { (result : String) in
+            successBlock(result)
+        }) { (error) in
+            failureBlock(error)
+        }
+    }
+    
+    func getCalendarRaces(season: String, cache: Bool, success successBlock: @escaping ((Array<Race>) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
+       
+        var numRacesCache = 0
+        if cache {
+            let results = self.raceStore.getRaces(season: season)
+            numRacesCache = results.count
+            if numRacesCache > 0 {
+                successBlock(results)
+            }
+        }
+            
+        if !cache || numRacesCache == 0  {
             raceService.getCalendarInfo(season: season, success: { (result : Array<Race>) in
                 self.raceStore.saveRaces(races: result, season: season)
                 successBlock(result)
             }) { (err : Error) in
                 failureBlock(err)
             }
-        //}
+        }
     }
 }

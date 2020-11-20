@@ -18,27 +18,31 @@ class TeamsDataManager: NSObject {
         teamsService = TeamsService()
         teamsStore = TeamsStore()
     }
-    
-    func getTeams(season: String, category: String,success successBlock: @escaping ((Array<Team>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
-        /*if serverSynchronized == true {
-            successBlock(teamsStore.getTeams(season: season, category: category))
-        } else {
-            teamsService.getTeams(season: season, category: category, success: { (result : Array<Team>) in
-                self.teamsStore.saveTeams(teams: result, category: category, season: season)
-                successBlock(result)
-            }) { (err: Error) in
-                failureBlock(err)
-            }
-        }*/
         
-        let results = teamsStore.getTeams(season: season, category: category)
-        if results.count > 0 {
-            successBlock(results)
-        } else {
+    func checkTeamsUpdates(season:String, success successBlock: @escaping ((String) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
+        teamsService.checkTeamsUpdates(season: season, success: { (result) in
+            successBlock(result)
+        }) { (error) in
+            failureBlock(error)
+        }
+    }
+    
+    func getTeams(season: String, category: String, cache: Bool,success successBlock: @escaping ((Array<Team>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+        
+        var numTeamsCache = 0
+        if cache {
+            let results = teamsStore.getTeams(season: season, category: category)
+            numTeamsCache = results.count
+            if numTeamsCache > 0 {
+                successBlock(results)
+            }
+        }
+            
+        if !cache || numTeamsCache == 0  {
             teamsService.getTeams(season: season, category: category, success: { (result : Array<Team>) in
                 self.teamsStore.saveTeams(teams: result, category: category, season: season)
                 successBlock(result)
-            }) { (err: Error) in
+            }) { (err:Error) in
                 failureBlock(err)
             }
         }

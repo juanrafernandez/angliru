@@ -16,6 +16,7 @@ struct Classification {
     var teamAbreviation = ""
     var time = ""
     var points = ""
+    var season = ""
     
     init() {
         

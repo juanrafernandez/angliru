@@ -10,13 +10,19 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: BaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var viewMailSeparator: UIView!
     @IBOutlet weak var viewPasswordSeparator: UIView!
+    @IBOutlet weak var labelMail: UILabel!
     @IBOutlet weak var textFieldMail: UITextField!
+    @IBOutlet weak var labelMailError: UILabel!
+    @IBOutlet weak var buttonMailClean: UIButton!
     @IBOutlet weak var viewMailHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var labelPassword: UILabel!
+    @IBOutlet weak var labelPasswordError: UILabel!
+    @IBOutlet weak var buttonPasswordShow: UIButton!
     @IBOutlet weak var viewPasswordHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonLogin: UIButton!
     @IBOutlet weak var buttonGoogleLogin: UIButton!
@@ -35,17 +41,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         //GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func initializeInterface() {
         navigationController?.navigationBar.isHidden = true
         buttonLogin.layer.cornerRadius = 10
-        buttonGoogleLogin.layer.cornerRadius = 10
-        buttonGoogleLogin.layer.borderColor = UIColor.white.cgColor
-        buttonGoogleLogin.layer.borderWidth = 1.0
+//        buttonGoogleLogin.layer.cornerRadius = 10
+//        buttonGoogleLogin.layer.borderColor = UIColor.white.cgColor
+//        buttonGoogleLogin.layer.borderWidth = 1.0
         buttonSignIn.layer.cornerRadius = 10
         buttonSignIn.layer.borderColor = UIColor.white.cgColor
         buttonSignIn.layer.borderWidth = 1.0
@@ -56,26 +68,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textFieldMail.delegate = self
         textFieldPassword.delegate = self
 
-        textFieldMail.clearButtonMode = .always
-        textFieldMail.clearButtonMode = .whileEditing
-        textFieldPassword.clearButtonMode = .always
-        textFieldPassword.clearButtonMode = .whileEditing
+        //textFieldMail.clearButtonMode = .always
+        //textFieldMail.clearButtonMode = .whileEditing
+        //textFieldPassword.clearButtonMode = .always
+        //textFieldPassword.clearButtonMode = .whileEditing
         textFieldMail.tintColor = .white
         textFieldPassword.tintColor = .white
         
-        let clearButton = UIButton(type: .custom)
-        clearButton.setImage(UIImage(named:"ic_clear_text"), for: .normal)
-        clearButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        clearButton.contentMode = .scaleAspectFit
-        clearButton.addTarget(self, action: #selector(clear(sender:)), for: .touchUpInside)
-        textFieldMail.rightView = clearButton
-        textFieldMail.rightViewMode = .whileEditing
-        textFieldPassword.rightView = clearButton
-        textFieldPassword.rightViewMode = .whileEditing
+//        let clearButton = UIButton(type: .custom)
+//        clearButton.setImage(UIImage(named:"ic_clear_text"), for: .normal)
+//        clearButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+//        clearButton.contentMode = .scaleAspectFit
+//        clearButton.addTarget(self, action: #selector(clear(sender:)), for: .touchUpInside)
+//        textFieldMail.rightView = clearButton
+//        textFieldMail.rightViewMode = .whileEditing
+//        textFieldPassword.rightView = clearButton
+//        textFieldPassword.rightViewMode = .whileEditing
                 
-        textFieldMail.attributedPlaceholder = NSAttributedString(string: "mail",
+        textFieldMail.attributedPlaceholder = NSAttributedString(string: "Correo electrónico",
                                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        textFieldPassword.attributedPlaceholder = NSAttributedString(string: "contraseña",
+        textFieldPassword.attributedPlaceholder = NSAttributedString(string: "Contraseña",
                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
@@ -112,23 +124,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
+    @IBAction func buttonMailClean_clicked(_ sender: Any) {
+        textFieldMail.text = ""
+    }
+    
+    @IBAction func buttonPasswordShow_clicked(_ sender: Any) {
+        textFieldPassword.isSecureTextEntry = !textFieldPassword.isSecureTextEntry
+    }
+    
     @IBAction func buttonSignIn_clicked(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        var currentViewController : SignInViewController? = nil
-        for viewController in navigationController!.children {
-            if(viewController.isKind(of: SignInViewController.self)){
-                currentViewController = viewController as? SignInViewController
-                break
-            }
-        }
-        
-        if currentViewController == nil {
-            currentViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
-            navigationController?.pushViewController(currentViewController!, animated: true)
-        } else {
-            navigationController?.popToViewController(currentViewController!, animated: true)
-        }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        var currentViewController : SignInViewController? = nil
+//        for viewController in navigationController!.children {
+//            if(viewController.isKind(of: SignInViewController.self)){
+//                currentViewController = viewController as? SignInViewController
+//                break
+//            }
+//        }
+//        
+//        if currentViewController == nil {
+//            currentViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController
+//            navigationController?.pushViewController(currentViewController!, animated: true)
+//        } else {
+//            navigationController?.popToViewController(currentViewController!, animated: true)
+//        }
     }
     
     // MARK: - TextFieldDelegate methods
@@ -137,11 +157,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //imageLogoWidthConstraint.constant = 80
         showKeyboard(show: true)
         if textFieldMail == textField{
+            labelMail.isHidden = false
+            buttonMailClean.isHidden = false
             viewMailHeightConstraint.constant = 2
-            viewMailSeparator.backgroundColor = COLOR_ORANGE
+            //viewMailSeparator.backgroundColor = COLOR_ORANGE
         } else {
+            labelPassword.isHidden = false
+            buttonPasswordShow.isHidden = false
             viewPasswordHeightConstraint.constant = 2
-            viewPasswordSeparator.backgroundColor = COLOR_ORANGE
+            //viewPasswordSeparator.backgroundColor = COLOR_ORANGE
         }
     }
     
@@ -150,11 +174,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //imageLogoWidthConstraint.constant = 177
         
         if textFieldMail == textField{
+            if textFieldMail.text == "" {
+                labelMail.isHidden = true
+                buttonMailClean.isHidden = true
+            }
             viewMailHeightConstraint.constant = 1
-            viewMailSeparator.backgroundColor = UIColor.white
+            //viewMailSeparator.backgroundColor = UIColor.white
         } else {
+            if textFieldPassword.text == "" {
+                labelPassword.isHidden = true
+                buttonPasswordShow.isHidden = true
+            }
             viewPasswordHeightConstraint.constant = 1
-            viewPasswordSeparator.backgroundColor = UIColor.white
+            //viewPasswordSeparator.backgroundColor = UIColor.white
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -186,6 +218,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
             if let error = error {
+                self.showAlert(title: "No se ha podido acceder", message: "Comprueba que has introducido correctamente el usuario y la contraseña de Angliru", buttonText: "Volver a acceder")
                 print("Failed to sign user in with error: ", error.localizedDescription)
                 return
             }

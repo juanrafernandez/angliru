@@ -24,6 +24,16 @@ let CRONO_INDIVIDUAL = "ITT"
 let CRONO_EQUIPOS = "TTT"
 let CURRENT_UID = "current_uid"
 
+let LAST_UPDATE = "lastUpdate"
+let LAST_UPDATE_RACES_KEY = "lastUpdateRacesKey"
+let LAST_UPDATE_CALENDAR_KEY = "lastUpdateCalendarKey"
+let LAST_UPDATE_RIDERS_KEY = "lastUpdateRidersKey"
+let LAST_UPDATE_TEAMS_KEY = "lastUpdateTeamsKey"
+
+let CURRENT_SEASON = "2019"
+let SEASON_SELECTED = "SeasonSelected"
+let MINIMUN_YEAR_BBDD = 2019
+
 //Race status
 let RACE_END = 0
 let RACE_ACTIVE = 1

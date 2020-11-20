@@ -29,6 +29,36 @@ class CalendarInfoCell : UITableViewCell {
         viewShadow.layer.cornerRadius = 10
         viewStatus.layer.cornerRadius = 10
         
+        
+        let maskPath = UIBezierPath(roundedRect: viewDate.bounds,
+                                    byRoundingCorners: [.bottomLeft, .topLeft],
+                    cornerRadii: CGSize(width: 10.0, height: 10.0))
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        
+        //shape.borderWidth = 1
+        //shape.borderColor = UIColor.black.cgColor
+        
+        //viewDate.layer.masksToBounds = true
+        
+        //viewDate.layer.borderWidth = 1
+        //viewDate.layer.mask = shape
+        
+        //viewDate.layer.borderColor = UIColor.black.cgColor
+        
+        
+        let borderLayer = CAShapeLayer()
+        borderLayer.path = shape.path
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = UIColor.black.cgColor
+        borderLayer.lineWidth = 2
+        borderLayer.frame = bounds
+        viewDate.layer.addSublayer(borderLayer)
+        
+        viewDate.layer.mask = shape
+        
+        
         viewShadow.layer.shadowColor = UIColor.gray.cgColor
         viewShadow.layer.shadowOpacity = 0.3
         viewShadow.layer.shadowOffset = CGSize.zero
@@ -56,20 +86,27 @@ class CalendarInfoCell : UITableViewCell {
         } else {
             self.labelRaceDate.text = "\(dateNumber) \(MONTHS_SHORT[Int(dateMonth)!])"
         }
-        let raceStatus = getRaceStatus(raceDayStart: dateNumber, raceMonthStart: dateMonth, raceDayEnd: dateNumberEnd, raceMonthEnd: dateMonthEnd)
+        let raceStatus = Utils.getRaceStatus(raceDayStart: dateNumber, raceMonthStart: dateMonth, raceDayEnd: dateNumberEnd, raceMonthEnd: dateMonthEnd)
         
         switch raceStatus {
         case RACE_END:
             viewDate.backgroundColor = COLOR_ORANGE
             break
         case RACE_ACTIVE:
-            viewDate.backgroundColor = COLOR_ORANGE
-            break
-        case RACE_INACTIVE:
             viewDate.backgroundColor = COLOR_GREEN
             break
+        case RACE_INACTIVE:
+            viewDate.backgroundColor = UIColor.white
+//            viewDate.layer.borderColor = UIColor.black.cgColor
+//            viewDate.layer.borderWidth = 1
+            self.labelDay.textColor = .black
+            self.labelYear.textColor = .black
+            self.labelMonth.textColor = .black
+            break
         default:
-            viewDate.backgroundColor = COLOR_GRAY
+            viewDate.backgroundColor = UIColor.white
+//            viewDate.layer.borderColor = UIColor.black.cgColor
+//            viewDate.layer.borderWidth = 1
             break
         }
         
@@ -87,30 +124,30 @@ class CalendarInfoCell : UITableViewCell {
         }
     }
     
-    func getRaceStatus(raceDayStart: String, raceMonthStart: String, raceDayEnd: String, raceMonthEnd: String) -> Int {
-        let dateStartFormatted = makeDate(year: 2019, month: Int(raceMonthStart)!, day: Int(raceDayStart)!)
-        var dateEndFormatted = Date()
-        if raceDayEnd == "" || raceMonthEnd == "" {
-            dateEndFormatted = dateStartFormatted
-        } else {
-            dateEndFormatted = makeDate(year: 2019, month: Int(raceMonthEnd)!, day: Int(raceDayEnd)!)
-        }
-        
-        let currentDate = Date()
-        
-        if dateEndFormatted > currentDate {
-            return RACE_INACTIVE
-        } else if dateStartFormatted >= currentDate && dateEndFormatted <= currentDate{
-            return RACE_ACTIVE
-        } else {
-            return RACE_END
-        }
-    }
+//    func getRaceStatus(raceDayStart: String, raceMonthStart: String, raceDayEnd: String, raceMonthEnd: String) -> Int {
+//        let dateStartFormatted = makeDate(year: 2019, month: Int(raceMonthStart)!, day: Int(raceDayStart)!)
+//        var dateEndFormatted = Date()
+//        if raceDayEnd == "" || raceMonthEnd == "" {
+//            dateEndFormatted = dateStartFormatted
+//        } else {
+//            dateEndFormatted = makeDate(year: 2019, month: Int(raceMonthEnd)!, day: Int(raceDayEnd)!)
+//        }
+//        
+//        let currentDate = Date()
+//        
+//        if dateEndFormatted > currentDate {
+//            return RACE_INACTIVE
+//        } else if dateStartFormatted >= currentDate && dateEndFormatted <= currentDate{
+//            return RACE_ACTIVE
+//        } else {
+//            return RACE_END
+//        }
+//    }
     
-    func makeDate(year: Int, month: Int, day: Int) -> Date {
-        var calendar = Calendar(identifier: .gregorian)
-        // calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-        let components = DateComponents(year: year, month: month, day: day)
-        return calendar.date(from: components)!
-    }
+//    func makeDate(year: Int, month: Int, day: Int) -> Date {
+//        var calendar = Calendar(identifier: .gregorian)
+//        // calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+//        let components = DateComponents(year: year, month: month, day: day)
+//        return calendar.date(from: components)!
+//    }
 }

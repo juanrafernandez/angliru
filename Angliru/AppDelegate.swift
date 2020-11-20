@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         registerForRemoteNotifications(application: application)
-        
+        Messaging.messaging().delegate = self
+
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         // Load initial screen
@@ -75,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerUserNotificationSettings(settings)
         }
         
-        Messaging.messaging().delegate = self
+        //Messaging.messaging().delegate = self
         application.registerForRemoteNotifications()
     }
     
@@ -122,6 +123,60 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
         
         completionHandler(UIBackgroundFetchResult.newData)
     }
+//}
+//
+//@available(iOS 10, *)
+//extension AppDelegate : UNUserNotificationCenterDelegate {
+
+    // Receive displayed notifications for iOS 10 devices.
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                              willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+          print("Message ID: \(messageID)")
+        }
+
+        // Print full message.
+        print(userInfo)
+
+        // Change this to your preferred presentation option
+        completionHandler([])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                              didReceive response: UNNotificationResponse,
+                              withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+
+        let type = userInfo["type"] as? String ?? ""
+        let race = userInfo["race"] as? String ?? ""
+        let date = userInfo["date"] as? String ?? ""
+
+        // Print full message.
+        print(userInfo)
+        print(type)
+        print(race)
+        print(date)
+        if type == "BET" {
+            
+        }
+
+        completionHandler()
+    }
+    
+    func showBetScreen(raceName: String) {
+        
+    }
 }
 
 extension AppDelegate:MessagingDelegate {
@@ -140,4 +195,5 @@ extension AppDelegate:MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
         print("Datos de la notificación: ", remoteMessage.appData)
     }
+    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TeamsPresenterInput {
-    func getTeams(season: String, category: String)
+    func getTeams(season: String, category: String, cache: Bool)
 }
 
 protocol TeamsPresenterOutput {
@@ -17,6 +17,8 @@ protocol TeamsPresenterOutput {
     func presenterDidGetTeamsError(error:Error)
     func presenterDidReceiveTeamRiders(result : Array<Rider>)
     func presenterDidReceiveTeamRidersError(error : Error)
+    func presenterDidCheckTeamsUpdates(updated: String)
+    func presenterDidCheckTeamsUpdatesError(error: Error)
 }
 
 class TeamsPresenter: NSObject, TeamsPresenterInput {
@@ -27,8 +29,18 @@ class TeamsPresenter: NSObject, TeamsPresenterInput {
         dataManager = TeamsDataManager()
     }
     
-    func getTeams(season: String, category: String) {
-        dataManager.getTeams(season: season, category: category, success: { (result: Array<Team>) in
+    func checkTeamsUpdates(season:String) {
+        dataManager.checkTeamsUpdates(season: season, success: { (result) in
+            if (self.output != nil) {
+                self.output.presenterDidCheckTeamsUpdates(updated: result)
+            }
+        }) { (error) in
+            self.output.presenterDidCheckTeamsUpdatesError(error: error)
+        }
+    }
+    
+    func getTeams(season: String, category: String, cache: Bool) {
+        dataManager.getTeams(season: season, category: category, cache: cache, success: { (result: Array<Team>) in
             self.output.presenterDidGetTeams(result: result,category: category)
         }) { (err: Error) in
             self.output.presenterDidGetTeamsError(error: err)

@@ -11,6 +11,29 @@ import Firebase
 
 class TeamsService: NSObject {
 
+    func checkTeamsUpdates(season: String, success successBlock: @escaping ((String) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+        let db = Firestore.firestore()
+        let docRef = db.collection("teams").document(season).collection("update").document("lastUpdate")
+        
+        docRef.getDocument() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                failureBlock(err)
+            } else {
+                
+                print(querySnapshot!.documentID)
+                var result = ""
+                if (querySnapshot?.data() != nil) {
+                    if (querySnapshot?.data()?.keys.contains("lastUpdate"))! {
+                        result = querySnapshot!.data()!["lastUpdate"] as? String ?? ""
+                    }
+                }
+                successBlock(result)
+            }
+        }
+        
+    }
+    
     func getTeams(season : String, category: String, success successBlock: @escaping ((Array<Team>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
         let db = Firestore.firestore()
         var teams = Array<Team>()

@@ -40,6 +40,7 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
     
     var race = Race()
     var presenter = CalendarPresenter()
+    var navigationParent : UINavigationController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
         viewRaceStatus.layer.cornerRadius = 10
         viewPopup.layer.cornerRadius = 10
         viewTarget.layer.cornerRadius = 10
+        
         viewTargetShadow.layer.cornerRadius = 10
         viewTargetShadow.layer.cornerRadius = 10
         
@@ -65,9 +67,12 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
         viewTargetShadow.layer.shadowRadius = 6
         
         labelRaceName.text = race.name
-        //viewBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
-        viewTarget.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
-        viewTarget.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
+        viewBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside(_:))))
+        let tapPopup = UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside(_:)))
+        tapPopup.cancelsTouchesInView = false
+        viewPopup.addGestureRecognizer(tapPopup)
+        //viewTarget.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
+        viewTarget.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside(_:))))
         
         presenter.output = self
         
@@ -89,8 +94,11 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
-    @objc func dismissOnTapOutside(){
-       self.dismiss(animated: true, completion: nil)
+    @objc func dismissOnTapOutside(_ sender: UITapGestureRecognizer){
+        let view = sender.view
+        if view == viewBackground || view == viewTarget {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func fillRaceData() {
@@ -127,10 +135,20 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
             labelStages.text = "ETAPAS (1)"
         }
         
-        buttonTeams.setTitle("\(race.teams.count)", for: .normal)
+        buttonTeams.setTitle("\(race.numTeams)", for: .normal)
     }
     
     @IBAction func buttonTeams_clicked(_ sender: Any) {
+    
+    }
+    
+    @IBAction func buttonBet_clicked(_ sender: Any) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "BetsTeamsViewController") as! BetsTeamsViewController
+        viewController.race = race
+        self.navigationParent?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func buttonClassification_clicked(_ sender: Any) {
     
     }
     
@@ -155,11 +173,22 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if race.stages.count > 0 {
+            let stage = race.stages[indexPath.row]
+            let name = "\(indexPath.row+1). \(race.stages[indexPath.row].origin) - \(race.stages[indexPath.row].destiny)"
+            viewStage(stage: stage, stageName: name)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
+    }
+    
+    func viewStage (stage: Stage, stageName: String) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "StageViewController") as! StageViewController
+        viewController.stage = stage
+        viewController.stageName = stageName
+        self.navigationParent?.pushViewController(viewController, animated: true)
     }
     
     //MARK: CalendarPresenterOutput methods
@@ -170,4 +199,14 @@ class CalendarPopUpViewController: UIViewController, UITableViewDelegate, UITabl
     func presenterDidReceiveCalendarRacesError(error: Error) {
         
     }
+    
+    func presenterDidCheckCalendarRacesUpdates(updated: String) {
+        
+    }
+    
+    func presenterDidCheckCalendarRacesUpdatesError(error: Error) {
+        
+    }
+    
+    
 }

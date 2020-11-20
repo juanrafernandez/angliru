@@ -28,6 +28,6 @@ class RiderJDO : Object {
     @objc dynamic var uci = ""
     
     override class func primaryKey() -> String? {
-        return "id"
+        return "name"
     }
 }

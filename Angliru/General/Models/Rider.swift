@@ -9,7 +9,9 @@
 import Foundation
 
 struct Rider {
+    var id = ""
     var name = ""
+    var surname = ""
     var country = ""
     var birthPlace = ""
     var age = ""
@@ -20,6 +22,7 @@ struct Rider {
     var weight = ""
     var strava = ""
     var twitter = ""
+    var facebook = ""
     var photo = ""
     var team = ""
     var category = ""

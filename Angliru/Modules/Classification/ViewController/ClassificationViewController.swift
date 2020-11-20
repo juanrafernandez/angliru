@@ -24,32 +24,39 @@ class ClassificationViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
 
         presenter.output = self
-        initilizeInterface()
+        presenter.checkClassificationRacesUpdates(season: CURRENT_SEASON)
+        //initilizeInterface()
         tableView.register(UINib(nibName: "ClassificationCell", bundle: nil), forCellReuseIdentifier: "ClassificationCell")
         tableView.tableFooterView = UIView()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        segmentControl.removeAllSegments()
     }
     
     func initilizeInterface() {
-        segmentControl.removeAllSegments()
         if classificationTypes.count > 0 {
             for i in 0..<classificationTypes.count {
                 segmentControl.insertSegment(withTitle: classificationTypes[i], at: i, animated: true)
             }
             segmentControl.selectedSegmentIndex = 0
-        } else {
+        }
+    }
+    
+    func reloadInfo(cache:Bool) {
+     //   segmentControl.removeAllSegments()
+//        if classificationTypes.count > 0 {
+//            for i in 0..<classificationTypes.count {
+//                segmentControl.insertSegment(withTitle: classificationTypes[i], at: i, animated: true)
+//            }
+//            segmentControl.selectedSegmentIndex = 0
+//        } else {
             if raceName != "" {
                 SVProgressHUD.show()
-                for _ in 0..<CLASSIFICATION_TYPES.count {
-                    // racesResponse.racesResults.append(Array<Classification>())
-                }
                 for i in 0..<CLASSIFICATION_TYPES.count {
-                    presenter.getClassificationByType(raceName: raceName, season: season, type: CLASSIFICATION_TYPES[i])
+                    presenter.getClassificationByType(raceName: raceName, season: season, type: CLASSIFICATION_TYPES[i],cache:cache)
                 }
             }
-        }
-        //navigationItem.title = racesResponse.raceName
+       // }
     }
     
     // MARK: - Actions ⚡️
@@ -133,6 +140,23 @@ class ClassificationViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func presenterDidReceiveTeamRidersByRaceError(error: Error) {
+        
+    }
+    
+    func presenterDidCheckClassificationRacesUpdates(updated: String) {
+        let savedDate = UserDefaults.standard.string(forKey: "\(LAST_UPDATE_RACES_KEY)\(CURRENT_SEASON)") ?? ""
+        if savedDate == "" || Utils.getDateFrom(stringDate: savedDate) > Utils.getDateFrom(stringDate: updated) {
+            //Request info from server
+            UserDefaults.standard.set(updated, forKey: "\(LAST_UPDATE_RACES_KEY)\(CURRENT_SEASON)")
+            reloadInfo(cache: false)
+            //presenter.getCalendarRaces(season: CURRENT_SEASON, cache: false)
+        } else {
+            reloadInfo(cache: true)
+            //presenter.getCalendarRaces(season: CURRENT_SEASON, cache: true)
+        }
+    }
+    
+    func presenterDidCheckClassificationRacesUpdatesError(error: Error) {
         
     }
 }

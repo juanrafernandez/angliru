@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RidersPresenterInput {
-    func getAllRiders(category:String, season:String)
+    func getAllRiders(category:String, season:String, cache: Bool)
     func getRiderInfo(riderName: String)
 }
 
@@ -18,6 +18,8 @@ protocol RidersPresenterOutput {
     func presenterDidGetRiderInfoError(error:Error)
     func presenterDidGetAllRiders(result:Array<Rider>,category:String)
     func presenterDidGetAllRidersError(error:Error)
+    func presenterDidCheckRidersUpdates(updated: String)
+    func presenterDidCheckRidersUpdatesError(error: Error)
 }
 
 class RidersPresenter: NSObject, RidersPresenterInput {
@@ -29,8 +31,18 @@ class RidersPresenter: NSObject, RidersPresenterInput {
         dataManager = RidersDataManager()
     }
     
-    func getAllRiders(category:String, season:String) {
-        dataManager.getAllRiders(category: category, season: season, success: { (result: Array<Rider>) in
+    func checkRidersUpdates(season:String) {
+        dataManager.checkRidersUpdates(season: season, success: { (result) in
+            if (self.output != nil) {
+                self.output.presenterDidCheckRidersUpdates(updated: result)
+            }
+        }) { (error) in
+            self.output.presenterDidCheckRidersUpdatesError(error: error)
+        }
+    }
+    
+    func getAllRiders(category:String, season:String, cache: Bool) {
+        dataManager.getAllRiders(category: category, season: season, cache: cache, success: { (result: Array<Rider>) in
             self.output.presenterDidGetAllRiders(result: result, category: category)
         }) { (err:Error) in
             self.output.presenterDidGetAllRidersError(error: err)

@@ -11,6 +11,28 @@ import Firebase
 
 class RidersService: NSObject {
     
+    func checkRidersUpdates(season: String, success successBlock: @escaping ((String) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
+        let db = Firestore.firestore()
+        let docRef = db.collection("riders").document(season).collection("update").document("lastUpdate")
+        
+        docRef.getDocument() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                failureBlock(err)
+            } else {
+                
+                print(querySnapshot!.documentID)
+                var result = ""
+                if (querySnapshot?.data() != nil) {
+                    if (querySnapshot?.data()?.keys.contains("lastUpdate"))! {
+                        result = querySnapshot!.data()!["lastUpdate"] as? String ?? ""
+                    }
+                }
+                successBlock(result)
+            }
+        }
+    }
+    
     func getRiderInfo(riderName : String, success successBlock: @escaping ((Rider) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
         let db = Firestore.firestore()
         var rider = Rider()
@@ -58,7 +80,8 @@ class RidersService: NSObject {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     var rider = Rider()
-                    rider.name = document.documentID
+                    rider.id = document.documentID
+                    rider.name = document.data()["name"] as? String ?? ""
                     rider.age = document.data()["age"] as? String ?? ""
                     rider.birthPlace = document.data()["birthPlace"] as? String ?? ""
                     rider.country = document.data()["country"] as? String ?? ""

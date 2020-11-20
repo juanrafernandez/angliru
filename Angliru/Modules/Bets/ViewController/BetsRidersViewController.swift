@@ -18,10 +18,11 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     var team = ""
     var race = Race()
     var season = ""
-    var riders = Array<Classification>()
+    //var riders = Array<Classification>()
     var presenterClassification = ClassificationPresenter()
     var presenter = BetsPresenter()
-    var selectedRider = Classification()
+    var selectedRider = RiderJDO()
+    var teamRiders = [RiderJDO]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         presenterClassification.output = self
         presenter.output = self
-        reloadInfo()
+        //reloadInfo()
     }
     
     func reloadInfo() {
@@ -52,7 +53,7 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: TableView delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return riders.count
+        return teamRiders.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,10 +63,10 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BetRiderCell", for: indexPath) as! BetRiderCell
-        let classification = riders[indexPath.row]
-        cell.imageViewCountry.image = UIImage(named: classification.country)
-        cell.labelName.text = classification.name
-        cell.labelTeam.text = classification.teamAbreviation
+        let rider = teamRiders[indexPath.row]
+        //cell.imageViewCountry.image = UIImage(named: classification.country)
+        cell.labelName.text = rider.name
+        cell.labelTeam.text = rider.team
         
         return cell
     }
@@ -84,7 +85,7 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
                 //buttonSave.isEnabled = true
-                selectedRider = riders[indexPath.row]
+                selectedRider = teamRiders[indexPath.row]
             } else {
                 cell.accessoryType = .none
             }
@@ -107,12 +108,20 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func presenterDidReceiveTeamRidersByRace(result: Array<Classification>) {
-        riders = result
-        SVProgressHUD.dismiss()
-        tableView.reloadData()
+//        riders = result
+//        SVProgressHUD.dismiss()
+//        tableView.reloadData()
     }
     
     func presenterDidReceiveTeamRidersByRaceError(error: Error) {
+        
+    }
+    
+    func presenterDidCheckClassificationRacesUpdates(updated: String) {
+        
+    }
+    
+    func presenterDidCheckClassificationRacesUpdatesError(error: Error) {
         
     }
     
@@ -130,6 +139,14 @@ class BetsRidersViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func presenterGetBetsOpenError(error: Error) {
+        
+    }
+    
+    func presenterDidGetRaceTeams(result: Array<RiderJDO>) {
+        
+    }
+    
+    func presenterDidGetRaceTeamsError(error: Error) {
         
     }
 }

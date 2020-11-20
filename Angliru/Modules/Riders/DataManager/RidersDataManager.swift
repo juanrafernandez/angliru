@@ -12,29 +12,31 @@ class RidersDataManager: NSObject {
     let ridersService : RidersService!
     let ridersStore : RidersStore!
     
-    var serverSynchronized = false
-    
     override init() {
         ridersService = RidersService()
         ridersStore = RidersStore()
     }
     
-    func getAllRiders(category : String, season: String, success successBlock: @escaping ((Array<Rider>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
-        /*if serverSynchronized == true {
-            successBlock(self.ridersStore.getRiders(season: season, category: category))
-        } else {
-            ridersService.getAllRiders(category: category, season: season, success: { (result: Array<Rider>) in
-                self.ridersStore.saveRiders(riders: result, category: category, season: season)
-                successBlock(result)
-            }) { (err:Error) in
-                failureBlock(err)
-            }
-        }*/
+    func checkRidersUpdates(season:String, success successBlock: @escaping ((String) -> Void), failure failureBlock: @escaping ((Error) -> Void)) {
+        ridersService.checkRidersUpdates(season: season, success: { (result) in
+            successBlock(result)
+        }) { (error) in
+            failureBlock(error)
+        }
+    }
+    
+    func getAllRiders(category : String, season: String, cache: Bool ,success successBlock: @escaping ((Array<Rider>) -> Void), failure failureBlock: @escaping ((Error) -> Void)){
         
-        let results = self.ridersStore.getRiders(season: season, category: category)
-        if results.count > 0 {
-            successBlock(results)
-        } else {
+        var numRidersCache = 0
+        if cache {
+            let results = self.ridersStore.getRiders(season: season, category: category)
+            numRidersCache = results.count
+            if numRidersCache > 0 {
+                successBlock(results)
+            }
+        }
+            
+        if !cache || numRidersCache == 0  {
             ridersService.getAllRiders(category: category, season: season, success: { (result: Array<Rider>) in
                 self.ridersStore.saveRiders(riders: result, category: category, season: season)
                 successBlock(result)

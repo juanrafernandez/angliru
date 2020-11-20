@@ -4,7 +4,6 @@
 //  Created by Jon Kent on 1/14/16.
 //  Copyright © 2016 Jon Kent. All rights reserved.
 //
-
 import UIKit
 
 @objc public enum SideMenuPushStyle: Int { case
@@ -30,7 +29,6 @@ internal protocol MenuModel {
     var alwaysAnimate: Bool { get }
     /**
      The blur effect style of the menu if the menu's root view controller is a UITableViewController or UICollectionViewController.
-
      - Note: If you want cells in a UITableViewController menu to show vibrancy, make them a subclass of UITableViewVibrantCell.
      */
     var blurEffectStyle: UIBlurEffect.Style? { get }
@@ -50,7 +48,6 @@ internal protocol MenuModel {
     var enableTapToDismissGesture: Bool { get }
     /**
      The push style of the menu.
-
      There are six modes in MenuPushStyle:
      - defaultBehavior: The view controller is pushed onto the stack.
      - popWhenPossible: If a view controller already in the stack is of the same class as the pushed view controller, the stack is instead popped back to the existing view controller. This behavior can help users from getting lost in a deep navigation stack.
@@ -73,7 +70,7 @@ internal protocol SideMenuNavigationControllerTransitionDelegate: class {
     func sideMenuTransitionDidDismiss(menu: Menu)
 }
 
-public struct SideMenuSettings: SideMenuNavigationController.Model, InitializableStruct {
+public struct SideMenuSettings: Model, InitializableStruct {
     public var allowPushOfSameClassTwice: Bool = true
     public var alwaysAnimate: Bool = true
     public var animationOptions: UIView.AnimationOptions = .curveEaseInOut
@@ -105,12 +102,11 @@ public struct SideMenuSettings: SideMenuNavigationController.Model, Initializabl
 }
 
 internal typealias Menu = SideMenuNavigationController
+typealias Model = MenuModel & PresentationModel & AnimationModel
 
 @objcMembers
 open class SideMenuNavigationController: UINavigationController {
-
-    internal typealias Model = MenuModel & PresentationModel & AnimationModel
-
+    
     private lazy var _leftSide = Protected(false) { [weak self] oldValue, newValue in
         guard self?.isHidden != false else {
             Print.warning(.property, arguments: .leftSide, required: true)
@@ -336,7 +332,7 @@ open class SideMenuNavigationController: UINavigationController {
 }
 
 // Interface
-extension SideMenuNavigationController: SideMenuNavigationController.Model {
+extension SideMenuNavigationController: Model {
 
     @IBInspectable open var allowPushOfSameClassTwice: Bool {
         get { return settings.allowPushOfSameClassTwice }

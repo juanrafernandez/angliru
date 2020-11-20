@@ -19,10 +19,16 @@ class RaceJDO: Object {
     @objc dynamic var distance = 0.0
     @objc dynamic var web = ""
     @objc dynamic var twitter = ""
+    @objc dynamic var facebook = ""
     @objc dynamic var altimetry = 0.0
     @objc dynamic var profileImage = ""
+    @objc dynamic var destiny = ""
+    @objc dynamic var origin = ""
+    @objc dynamic var raceType = ""
+    @objc dynamic var numTeams = ""
+    var riders = List<RiderJDO>()
     var stages = List<StageJDO>()
-    var teams = List<String>()
+    //var teams = List<String>()
     //var classificationTypes = List<String>()
     var racesResults = List<ResultsJDO>()
     

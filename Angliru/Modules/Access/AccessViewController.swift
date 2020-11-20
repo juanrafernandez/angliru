@@ -26,12 +26,15 @@ class AccessViewController: UIViewController {
         //configureViewComponents()
         if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
+                var currentViewControllers = self.navigationController?.viewControllers
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
                 let navController = UINavigationController(rootViewController: loginViewController)
-                navController.navigationBar.barStyle = .blackTranslucent
-                
-                self.present(navController, animated: false, completion: nil)
+                //navController.navigationBar.barStyle = .blackTranslucent
+                currentViewControllers?.append(loginViewController)
+                //self.present(navController, animated: false, completion: nil)
+                self.navigationController?.setViewControllers(currentViewControllers!, animated: false)
+
             }
         } else {
             //configureViewComponents()
@@ -53,6 +56,8 @@ class AccessViewController: UIViewController {
                     let tabBarController = storyboard.instantiateViewController(withIdentifier: "BubbleTabBarController")
                     //self.navigationController?.pushViewController(tabBarController, animated: true)
                     self.navigationController?.setViewControllers([tabBarController], animated: true)
+                    
+                   // self.signOut()
                 })
             } else {
                 print("User does not exist")

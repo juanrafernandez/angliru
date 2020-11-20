@@ -35,7 +35,7 @@ class StageViewController: UIViewController, StagePresenterOutput {
         super.viewDidLoad()
         SVProgressHUD.show()
         presenter.output = self
-        presenter.getStageInfo(raceName: raceName, stageName: stageName, season: season)
+        //presenter.getStageInfo(raceName: raceName, stageName: stageName, season: season)
         initializeInterface ()
     }
     
